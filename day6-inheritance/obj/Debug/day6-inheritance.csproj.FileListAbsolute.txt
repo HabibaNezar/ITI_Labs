@@ -1,0 +1,7 @@
+D:\ITI\OOP\TASKS\day6-inheritance\bin\Debug\day6-inheritance.exe.config
+D:\ITI\OOP\TASKS\day6-inheritance\bin\Debug\day6-inheritance.exe
+D:\ITI\OOP\TASKS\day6-inheritance\bin\Debug\day6-inheritance.pdb
+D:\ITI\OOP\TASKS\day6-inheritance\obj\Debug\day6-inheritance.csproj.AssemblyReference.cache
+D:\ITI\OOP\TASKS\day6-inheritance\obj\Debug\day6-inheritance.csproj.CoreCompileInputs.cache
+D:\ITI\OOP\TASKS\day6-inheritance\obj\Debug\day6-inheritance.exe
+D:\ITI\OOP\TASKS\day6-inheritance\obj\Debug\day6-inheritance.pdb

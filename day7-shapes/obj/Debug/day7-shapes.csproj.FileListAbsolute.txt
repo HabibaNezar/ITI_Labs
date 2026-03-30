@@ -1,0 +1,7 @@
+D:\ITI\OOP\TASKS\day7-shapes\bin\Debug\day7-shapes.exe.config
+D:\ITI\OOP\TASKS\day7-shapes\bin\Debug\day7-shapes.exe
+D:\ITI\OOP\TASKS\day7-shapes\bin\Debug\day7-shapes.pdb
+D:\ITI\OOP\TASKS\day7-shapes\obj\Debug\day7-shapes.csproj.AssemblyReference.cache
+D:\ITI\OOP\TASKS\day7-shapes\obj\Debug\day7-shapes.csproj.CoreCompileInputs.cache
+D:\ITI\OOP\TASKS\day7-shapes\obj\Debug\day7-shapes.exe
+D:\ITI\OOP\TASKS\day7-shapes\obj\Debug\day7-shapes.pdb
