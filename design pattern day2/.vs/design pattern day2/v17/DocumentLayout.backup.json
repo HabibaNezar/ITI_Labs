@@ -1,0 +1,100 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\visual c#\\tasks\\design pattern day2\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{3184250B-482B-481E-9A2A-78ABD4492E47}|..\\MVC Design Pattern\\MVC Design Pattern.csproj|d:\\iti\\visual c#\\tasks\\mvc design pattern\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184250B-482B-481E-9A2A-78ABD4492E47}|..\\MVC Design Pattern\\MVC Design Pattern.csproj|d:\\iti\\visual c#\\tasks\\mvc design pattern\\controllers\\studentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184250B-482B-481E-9A2A-78ABD4492E47}|..\\MVC Design Pattern\\MVC Design Pattern.csproj|d:\\iti\\visual c#\\tasks\\mvc design pattern\\models\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184250B-482B-481E-9A2A-78ABD4492E47}|..\\MVC Design Pattern\\MVC Design Pattern.csproj|d:\\iti\\visual c#\\tasks\\mvc design pattern\\views\\studentview.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3184250B-482B-481E-9A2A-78ABD4492E47}|..\\MVC Design Pattern\\MVC Design Pattern.csproj|d:\\iti\\visual c#\\tasks\\mvc design pattern\\mvc design pattern.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\Program.cs",
+              "RelativeDocumentMoniker": "..\\MVC Design Pattern\\Program.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\Program.cs",
+              "RelativeToolTip": "..\\MVC Design Pattern\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T00:24:31.107Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "StudentController.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\Controllers\\StudentController.cs",
+              "RelativeDocumentMoniker": "..\\MVC Design Pattern\\Controllers\\StudentController.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\Controllers\\StudentController.cs*",
+              "RelativeToolTip": "..\\MVC Design Pattern\\Controllers\\StudentController.cs*",
+              "ViewState": "AgIAAAkAAAAAAAAAAADwvxQAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T00:22:29.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "StudentView.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\Views\\StudentView.cs",
+              "RelativeDocumentMoniker": "..\\MVC Design Pattern\\Views\\StudentView.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\Views\\StudentView.cs",
+              "RelativeToolTip": "..\\MVC Design Pattern\\Views\\StudentView.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACsAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T00:22:13.51Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\Models\\Student.cs",
+              "RelativeDocumentMoniker": "..\\MVC Design Pattern\\Models\\Student.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\Models\\Student.cs",
+              "RelativeToolTip": "..\\MVC Design Pattern\\Models\\Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-17T00:22:02.027Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MVC Design Pattern",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\MVC Design Pattern.csproj",
+              "RelativeDocumentMoniker": "..\\MVC Design Pattern\\MVC Design Pattern.csproj",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\MVC Design Pattern\\MVC Design Pattern.csproj*",
+              "RelativeToolTip": "..\\MVC Design Pattern\\MVC Design Pattern.csproj*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2026-03-17T00:20:24.932Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

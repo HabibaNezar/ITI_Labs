@@ -1,0 +1,84 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{414D1C13-0F96-4203-9670-4967CCC4B74F}|..\\day3Lab-visualC#(Player)\\day3Lab-visualC#(Player).csproj|d:\\iti\\visual c#\\tasks\\day3lab-visualc#(player)\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{414D1C13-0F96-4203-9670-4967CCC4B74F}|..\\day3Lab-visualC#(Player)\\day3Lab-visualC#(Player).csproj|d:\\iti\\visual c#\\tasks\\day3lab-visualc#(player)\\leage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{414D1C13-0F96-4203-9670-4967CCC4B74F}|..\\day3Lab-visualC#(Player)\\day3Lab-visualC#(Player).csproj|d:\\iti\\visual c#\\tasks\\day3lab-visualc#(player)\\team.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{414D1C13-0F96-4203-9670-4967CCC4B74F}|..\\day3Lab-visualC#(Player)\\day3Lab-visualC#(Player).csproj|d:\\iti\\visual c#\\tasks\\day3lab-visualc#(player)\\player.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 3,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Leage.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#(Player)\\Leage.cs",
+              "RelativeDocumentMoniker": "..\\day3Lab-visualC#(Player)\\Leage.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#(Player)\\Leage.cs",
+              "RelativeToolTip": "..\\day3Lab-visualC#(Player)\\Leage.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABcAAAAIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T21:28:42.857Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Team.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#(Player)\\Team.cs",
+              "RelativeDocumentMoniker": "..\\day3Lab-visualC#(Player)\\Team.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#(Player)\\Team.cs",
+              "RelativeToolTip": "..\\day3Lab-visualC#(Player)\\Team.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T20:39:10.706Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Player.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#(Player)\\Player.cs",
+              "RelativeDocumentMoniker": "..\\day3Lab-visualC#(Player)\\Player.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#(Player)\\Player.cs",
+              "RelativeToolTip": "..\\day3Lab-visualC#(Player)\\Player.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwCwAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T20:29:35.93Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#(Player)\\Program.cs",
+              "RelativeDocumentMoniker": "..\\day3Lab-visualC#(Player)\\Program.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day3Lab-visualC#(Player)\\Program.cs",
+              "RelativeToolTip": "..\\day3Lab-visualC#(Player)\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-06T20:29:19.378Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

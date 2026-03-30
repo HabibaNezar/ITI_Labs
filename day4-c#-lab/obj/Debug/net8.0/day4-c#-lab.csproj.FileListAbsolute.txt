@@ -1,0 +1,14 @@
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\day4-c#-lab.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\day4-c#-lab.AssemblyInfoInputs.cache
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\day4-c#-lab.AssemblyInfo.cs
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\day4-c#-lab.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\day4-c#-lab\bin\Debug\net8.0\day4-c#-lab.exe
+D:\ITI\visual c#\tasks\day4-c#-lab\bin\Debug\net8.0\day4-c#-lab.deps.json
+D:\ITI\visual c#\tasks\day4-c#-lab\bin\Debug\net8.0\day4-c#-lab.runtimeconfig.json
+D:\ITI\visual c#\tasks\day4-c#-lab\bin\Debug\net8.0\day4-c#-lab.dll
+D:\ITI\visual c#\tasks\day4-c#-lab\bin\Debug\net8.0\day4-c#-lab.pdb
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\day4-c#-lab.dll
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\refint\day4-c#-lab.dll
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\day4-c#-lab.pdb
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\day4-c#-lab.genruntimeconfig.cache
+D:\ITI\visual c#\tasks\day4-c#-lab\obj\Debug\net8.0\ref\day4-c#-lab.dll

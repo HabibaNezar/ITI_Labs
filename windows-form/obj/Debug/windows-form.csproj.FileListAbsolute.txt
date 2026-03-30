@@ -1,0 +1,11 @@
+D:\ITI\visual c#\tasks\windows-form\bin\Debug\windows-form.exe.config
+D:\ITI\visual c#\tasks\windows-form\bin\Debug\windows-form.exe
+D:\ITI\visual c#\tasks\windows-form\bin\Debug\windows-form.pdb
+D:\ITI\visual c#\tasks\windows-form\obj\Debug\windows-form.csproj.AssemblyReference.cache
+D:\ITI\visual c#\tasks\windows-form\obj\Debug\windows_form.Properties.Resources.resources
+D:\ITI\visual c#\tasks\windows-form\obj\Debug\windows-form.csproj.GenerateResource.cache
+D:\ITI\visual c#\tasks\windows-form\obj\Debug\windows-form.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\windows-form\obj\Debug\windows-form.exe
+D:\ITI\visual c#\tasks\windows-form\obj\Debug\windows-form.pdb
+D:\ITI\visual c#\tasks\windows-form\obj\Debug\windows-form.exe.config
+D:\ITI\visual c#\tasks\windows-form\obj\Debug\windows_form.contactApp.resources

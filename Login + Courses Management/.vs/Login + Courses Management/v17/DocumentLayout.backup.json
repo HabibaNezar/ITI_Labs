@@ -1,0 +1,220 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\profileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\profileform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\profileform.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\bussinesslayer(bl)\\studentsbl\\getstudentdatabyname\u0026pass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:bussinesslayer(bl)\\studentsbl\\getstudentdatabyname\u0026pass.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\editprofileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\editprofileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\editprofileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\editprofileform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\bussinesslayer(bl)\\studentsbl\\editstudentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:bussinesslayer(bl)\\studentsbl\\editstudentdata.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\presentationlayer(pl)-forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:presentationlayer(pl)-forms\\loginform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|d:\\iti\\visual c#\\tasks\\login \u002B courses management\\dataaccesslayer(dal)\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{B6238223-2AEC-4B2D-A12E-B6B5CBE1DD9B}|Login \u002B Courses Management.csproj|solutionrelative:dataaccesslayer(dal)\\dbconnection.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 7,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ProfileForm.Designer.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\ProfileForm.Designer.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\ProfileForm.Designer.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\ProfileForm.Designer.cs",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\ProfileForm.Designer.cs",
+              "ViewState": "AgIAAGUAAAAAAAAAAAAmwHIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T23:44:00.577Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "EditProfileForm.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\EditProfileForm.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\EditProfileForm.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\EditProfileForm.cs",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\EditProfileForm.cs",
+              "ViewState": "AgIAABQAAAAAAAAAAADwvyEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T23:19:43.044Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "EditStudentData.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\BussinessLayer(BL)\\StudentsBL\\EditStudentData.cs",
+              "RelativeDocumentMoniker": "BussinessLayer(BL)\\StudentsBL\\EditStudentData.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\BussinessLayer(BL)\\StudentsBL\\EditStudentData.cs",
+              "RelativeToolTip": "BussinessLayer(BL)\\StudentsBL\\EditStudentData.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAADwvxYAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T23:14:44.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EditProfileForm.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\EditProfileForm.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\EditProfileForm.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\EditProfileForm.cs [Design]",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\EditProfileForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T23:11:24.374Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginForm.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\LoginForm.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\LoginForm.cs",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\LoginForm.cs",
+              "ViewState": "AgIAABYAAAAAAAAAAAAQwBkAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T23:09:10.475Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "GetStudentDataByName\u0026Pass.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\BussinessLayer(BL)\\StudentsBL\\GetStudentDataByName\u0026Pass.cs",
+              "RelativeDocumentMoniker": "BussinessLayer(BL)\\StudentsBL\\GetStudentDataByName\u0026Pass.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\BussinessLayer(BL)\\StudentsBL\\GetStudentDataByName\u0026Pass.cs",
+              "RelativeToolTip": "BussinessLayer(BL)\\StudentsBL\\GetStudentDataByName\u0026Pass.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAABCAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T23:09:03.375Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "LoginForm.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\LoginForm.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\LoginForm.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\LoginForm.cs [Design]",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\LoginForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T23:04:59.213Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "ProfileForm.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\ProfileForm.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\ProfileForm.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\ProfileForm.cs",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\ProfileForm.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAcwEkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T22:59:06.947Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ProfileForm.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\ProfileForm.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\ProfileForm.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\ProfileForm.cs [Design]",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\ProfileForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T22:58:34.027Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainForm.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\MainForm.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\MainForm.cs",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\MainForm.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAwwGIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T20:15:46.829Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MainForm.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\MainForm.cs",
+              "RelativeDocumentMoniker": "PresentationLayer(PL)-Forms\\MainForm.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\PresentationLayer(PL)-Forms\\MainForm.cs [Design]",
+              "RelativeToolTip": "PresentationLayer(PL)-Forms\\MainForm.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T19:12:52.063Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "DBConnection.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\DataAccessLayer(DAL)\\DBConnection.cs",
+              "RelativeDocumentMoniker": "DataAccessLayer(DAL)\\DBConnection.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\Login \u002B Courses Management\\DataAccessLayer(DAL)\\DBConnection.cs",
+              "RelativeToolTip": "DataAccessLayer(DAL)\\DBConnection.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABEAAAA+AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-22T18:42:47.835Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

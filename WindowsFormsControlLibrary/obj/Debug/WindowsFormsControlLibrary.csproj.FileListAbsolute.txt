@@ -1,0 +1,8 @@
+D:\ITI\visual c#\tasks\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.csproj.AssemblyReference.cache
+D:\ITI\visual c#\tasks\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.LoginFormControl.resources
+D:\ITI\visual c#\tasks\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.csproj.GenerateResource.cache
+D:\ITI\visual c#\tasks\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\WindowsFormsControlLibrary\bin\Debug\WindowsFormsControlLibrary.dll
+D:\ITI\visual c#\tasks\WindowsFormsControlLibrary\bin\Debug\WindowsFormsControlLibrary.pdb
+D:\ITI\visual c#\tasks\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.dll
+D:\ITI\visual c#\tasks\WindowsFormsControlLibrary\obj\Debug\WindowsFormsControlLibrary.pdb

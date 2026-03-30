@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\visual c#\\tasks\\windows-form\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFCACCE-1175-4751-938C-902552DD16D1}|windows-form.csproj|d:\\iti\\visual c#\\tasks\\windows-form\\contactapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{5CFCACCE-1175-4751-938C-902552DD16D1}|windows-form.csproj|solutionrelative:contactapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5CFCACCE-1175-4751-938C-902552DD16D1}|windows-form.csproj|d:\\iti\\visual c#\\tasks\\windows-form\\contactapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5CFCACCE-1175-4751-938C-902552DD16D1}|windows-form.csproj|solutionrelative:contactapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "contactApp.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\windows-form\\contactApp.cs",
+              "RelativeDocumentMoniker": "contactApp.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\windows-form\\contactApp.cs*",
+              "RelativeToolTip": "contactApp.cs*",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T21:29:21.742Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "contactApp.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\windows-form\\contactApp.cs",
+              "RelativeDocumentMoniker": "contactApp.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\windows-form\\contactApp.cs [Design]*",
+              "RelativeToolTip": "contactApp.cs [Design]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T21:28:22.58Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

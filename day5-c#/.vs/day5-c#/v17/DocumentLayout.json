@@ -1,0 +1,133 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\visual c#\\tasks\\day5-c#\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|d:\\iti\\visual c#\\tasks\\day5-c#\\exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|solutionrelative:exam.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|d:\\iti\\visual c#\\tasks\\day5-c#\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|d:\\iti\\visual c#\\tasks\\day5-c#\\question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|solutionrelative:question.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|d:\\iti\\visual c#\\tasks\\day5-c#\\subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|solutionrelative:subject.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|d:\\iti\\visual c#\\tasks\\day5-c#\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|solutionrelative:student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|d:\\iti\\visual c#\\tasks\\day5-c#\\exammode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|solutionrelative:exammode.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|d:\\iti\\visual c#\\tasks\\day5-c#\\answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{382FB2D4-04E4-4A5F-8784-9B8A40FD1E3F}|day5-c#.csproj|solutionrelative:answer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Exam.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Exam.cs",
+              "RelativeDocumentMoniker": "Exam.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Exam.cs",
+              "RelativeToolTip": "Exam.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACkAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T08:30:56.349Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Student.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Student.cs",
+              "RelativeDocumentMoniker": "Student.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Student.cs",
+              "RelativeToolTip": "Student.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T08:30:09.808Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Subject.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Subject.cs",
+              "RelativeDocumentMoniker": "Subject.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Subject.cs",
+              "RelativeToolTip": "Subject.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T08:29:51.138Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Answer.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Answer.cs",
+              "RelativeDocumentMoniker": "Answer.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Answer.cs",
+              "RelativeToolTip": "Answer.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T08:04:06.858Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "ExamMode.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day5-c#\\ExamMode.cs",
+              "RelativeDocumentMoniker": "ExamMode.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day5-c#\\ExamMode.cs",
+              "RelativeToolTip": "ExamMode.cs",
+              "ViewState": "AgIAAAEAAAAAAAAAAAAgwAgAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T08:03:33.131Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Question.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Question.cs",
+              "RelativeDocumentMoniker": "Question.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Question.cs",
+              "RelativeToolTip": "Question.cs",
+              "ViewState": "AgIAACoAAAAAAAAAAAA6wEYAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T07:57:26.592Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\day5-c#\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAxwBEAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-10T07:25:30.927Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
