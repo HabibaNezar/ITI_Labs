@@ -1,0 +1,21 @@
+# تجاهل فايلات الـ SQL الكبيرة (Backups & Data)
+*.bak
+*.mdf
+*.ldf
+
+# تجاهل فايلات الـ Visual Studio والـ C# اللي ملهاش لزمة تترفع
+bin/
+obj/
+.vs/
+*.user
+*.suo
+
+# تجاهل فايلات الـ Java والـ Node (لو بتستخدمي React)
+node_modules/
+*.class
+target/
+
+# تجاهل أي فايل مضغوط
+*.zip
+*.rar
+*.7z
