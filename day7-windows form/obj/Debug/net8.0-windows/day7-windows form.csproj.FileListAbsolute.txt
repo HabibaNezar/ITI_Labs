@@ -1,0 +1,17 @@
+D:\ITI\visual c#\tasks\day7-windows form\bin\Debug\net8.0-windows\day7-windows form.exe
+D:\ITI\visual c#\tasks\day7-windows form\bin\Debug\net8.0-windows\day7-windows form.deps.json
+D:\ITI\visual c#\tasks\day7-windows form\bin\Debug\net8.0-windows\day7-windows form.runtimeconfig.json
+D:\ITI\visual c#\tasks\day7-windows form\bin\Debug\net8.0-windows\day7-windows form.dll
+D:\ITI\visual c#\tasks\day7-windows form\bin\Debug\net8.0-windows\day7-windows form.pdb
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7_windows_form.Form1.resources
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7-windows form.csproj.GenerateResource.cache
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7-windows form.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7-windows form.AssemblyInfoInputs.cache
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7-windows form.AssemblyInfo.cs
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7-windows form.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7-windows form.dll
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\refint\day7-windows form.dll
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7-windows form.pdb
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7-windows form.genruntimeconfig.cache
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\ref\day7-windows form.dll
+D:\ITI\visual c#\tasks\day7-windows form\obj\Debug\net8.0-windows\day7_windows_form.DealingWithDB.resources

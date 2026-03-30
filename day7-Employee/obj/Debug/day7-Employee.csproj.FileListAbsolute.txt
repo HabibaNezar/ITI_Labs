@@ -1,0 +1,7 @@
+D:\ITI\OOP\TASKS\day7-Employee\bin\Debug\day7-Employee.exe.config
+D:\ITI\OOP\TASKS\day7-Employee\bin\Debug\day7-Employee.exe
+D:\ITI\OOP\TASKS\day7-Employee\bin\Debug\day7-Employee.pdb
+D:\ITI\OOP\TASKS\day7-Employee\obj\Debug\day7-Employee.csproj.AssemblyReference.cache
+D:\ITI\OOP\TASKS\day7-Employee\obj\Debug\day7-Employee.csproj.CoreCompileInputs.cache
+D:\ITI\OOP\TASKS\day7-Employee\obj\Debug\day7-Employee.exe
+D:\ITI\OOP\TASKS\day7-Employee\obj\Debug\day7-Employee.pdb

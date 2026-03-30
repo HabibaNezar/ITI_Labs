@@ -1,0 +1,14 @@
+D:\ITI\visual c#\tasks\lab6-practice-c#\bin\Debug\net8.0\lab6-practice-c#.exe
+D:\ITI\visual c#\tasks\lab6-practice-c#\bin\Debug\net8.0\lab6-practice-c#.deps.json
+D:\ITI\visual c#\tasks\lab6-practice-c#\bin\Debug\net8.0\lab6-practice-c#.runtimeconfig.json
+D:\ITI\visual c#\tasks\lab6-practice-c#\bin\Debug\net8.0\lab6-practice-c#.dll
+D:\ITI\visual c#\tasks\lab6-practice-c#\bin\Debug\net8.0\lab6-practice-c#.pdb
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\lab6-practice-c#.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\lab6-practice-c#.AssemblyInfoInputs.cache
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\lab6-practice-c#.AssemblyInfo.cs
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\lab6-practice-c#.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\lab6-practice-c#.dll
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\refint\lab6-practice-c#.dll
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\lab6-practice-c#.pdb
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\lab6-practice-c#.genruntimeconfig.cache
+D:\ITI\visual c#\tasks\lab6-practice-c#\obj\Debug\net8.0\ref\lab6-practice-c#.dll

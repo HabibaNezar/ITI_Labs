@@ -1,0 +1,7 @@
+D:\ITI\OOP\TASKS\Bank Account\bin\Debug\Bank Account.exe.config
+D:\ITI\OOP\TASKS\Bank Account\bin\Debug\Bank Account.exe
+D:\ITI\OOP\TASKS\Bank Account\bin\Debug\Bank Account.pdb
+D:\ITI\OOP\TASKS\Bank Account\obj\Debug\Bank Account.csproj.AssemblyReference.cache
+D:\ITI\OOP\TASKS\Bank Account\obj\Debug\Bank Account.csproj.CoreCompileInputs.cache
+D:\ITI\OOP\TASKS\Bank Account\obj\Debug\Bank Account.exe
+D:\ITI\OOP\TASKS\Bank Account\obj\Debug\Bank Account.pdb

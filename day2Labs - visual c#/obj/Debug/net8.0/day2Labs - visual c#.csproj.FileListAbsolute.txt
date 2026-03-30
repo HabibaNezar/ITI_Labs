@@ -1,0 +1,14 @@
+D:\ITI\visual c#\tasks\day2Labs - visual c#\bin\Debug\net8.0\day2Labs - visual c#.exe
+D:\ITI\visual c#\tasks\day2Labs - visual c#\bin\Debug\net8.0\day2Labs - visual c#.deps.json
+D:\ITI\visual c#\tasks\day2Labs - visual c#\bin\Debug\net8.0\day2Labs - visual c#.runtimeconfig.json
+D:\ITI\visual c#\tasks\day2Labs - visual c#\bin\Debug\net8.0\day2Labs - visual c#.dll
+D:\ITI\visual c#\tasks\day2Labs - visual c#\bin\Debug\net8.0\day2Labs - visual c#.pdb
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\day2Labs - visual c#.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\day2Labs - visual c#.AssemblyInfoInputs.cache
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\day2Labs - visual c#.AssemblyInfo.cs
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\day2Labs - visual c#.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\day2Labs - visual c#.dll
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\refint\day2Labs - visual c#.dll
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\day2Labs - visual c#.pdb
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\day2Labs - visual c#.genruntimeconfig.cache
+D:\ITI\visual c#\tasks\day2Labs - visual c#\obj\Debug\net8.0\ref\day2Labs - visual c#.dll

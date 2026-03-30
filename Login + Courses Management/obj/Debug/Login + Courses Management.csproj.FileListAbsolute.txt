@@ -1,0 +1,18 @@
+D:\ITI\visual c#\tasks\Login + Courses Management\bin\Debug\Login + Courses Management.exe.config
+D:\ITI\visual c#\tasks\Login + Courses Management\bin\Debug\Login + Courses Management.exe
+D:\ITI\visual c#\tasks\Login + Courses Management\bin\Debug\Login + Courses Management.pdb
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login + Courses Management.csproj.AssemblyReference.cache
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.AddCourseForm.resources
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.DisplayCoursesForm.resources
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.LoginForm.resources
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.MainForm.resources
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.Properties.Resources.resources
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login + Courses Management.csproj.GenerateResource.cache
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login + Courses Management.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login + Courses Management.exe
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login + Courses Management.pdb
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login + Courses Management.exe.config
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.DeleteCourseForm.resources
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.EditProfileForm.resources
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.ProfileForm.resources
+D:\ITI\visual c#\tasks\Login + Courses Management\obj\Debug\Login___Courses_Management.UpdateCourseForm.resources

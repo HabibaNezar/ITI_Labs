@@ -1,0 +1,113 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\visual c#\\tasks\\LoginForm\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88A4E-D69E-4CEC-8C7A-932294CD64A2}|..\\WindowsFormsApp-LoginForm\\WindowsFormsApp-LoginForm.csproj|d:\\iti\\visual c#\\tasks\\windowsformsapp-loginform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88A4E-D69E-4CEC-8C7A-932294CD64A2}|..\\WindowsFormsApp-LoginForm\\WindowsFormsApp-LoginForm.csproj|d:\\iti\\visual c#\\tasks\\windowsformsapp-loginform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88A4E-D69E-4CEC-8C7A-932294CD64A2}|..\\WindowsFormsApp-LoginForm\\WindowsFormsApp-LoginForm.csproj|d:\\iti\\visual c#\\tasks\\windowsformsapp-loginform\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D21A0B2-E2E4-4A24-85B4-9F64ED7FF7A8}|..\\WindowsFormsControlLibrary\\WindowsFormsControlLibrary.csproj|d:\\iti\\visual c#\\tasks\\windowsformscontrollibrary\\loginformcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1AE88A4E-D69E-4CEC-8C7A-932294CD64A2}|..\\WindowsFormsApp-LoginForm\\WindowsFormsApp-LoginForm.csproj|d:\\iti\\visual c#\\tasks\\windowsformsapp-loginform\\form2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{4D21A0B2-E2E4-4A24-85B4-9F64ED7FF7A8}|..\\WindowsFormsControlLibrary\\WindowsFormsControlLibrary.csproj|d:\\iti\\visual c#\\tasks\\windowsformscontrollibrary\\loginformcontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Form2.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\WindowsFormsApp-LoginForm\\Form2.cs",
+              "RelativeDocumentMoniker": "..\\WindowsFormsApp-LoginForm\\Form2.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\WindowsFormsApp-LoginForm\\Form2.cs",
+              "RelativeToolTip": "..\\WindowsFormsApp-LoginForm\\Form2.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:29:13.69Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Form2.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\WindowsFormsApp-LoginForm\\Form2.cs",
+              "RelativeDocumentMoniker": "..\\WindowsFormsApp-LoginForm\\Form2.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\WindowsFormsApp-LoginForm\\Form2.cs [Design]",
+              "RelativeToolTip": "..\\WindowsFormsApp-LoginForm\\Form2.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:29:01.145Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\WindowsFormsApp-LoginForm\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\WindowsFormsApp-LoginForm\\Form1.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\WindowsFormsApp-LoginForm\\Form1.cs",
+              "RelativeToolTip": "..\\WindowsFormsApp-LoginForm\\Form1.cs",
+              "ViewState": "AgIAABoAAAAAAAAAAAAgwCUAAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:17:51.37Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\WindowsFormsApp-LoginForm\\Form1.cs",
+              "RelativeDocumentMoniker": "..\\WindowsFormsApp-LoginForm\\Form1.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\WindowsFormsApp-LoginForm\\Form1.cs [Design]",
+              "RelativeToolTip": "..\\WindowsFormsApp-LoginForm\\Form1.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:17:50.373Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "LoginFormControl.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\WindowsFormsControlLibrary\\LoginFormControl.cs",
+              "RelativeDocumentMoniker": "..\\WindowsFormsControlLibrary\\LoginFormControl.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\WindowsFormsControlLibrary\\LoginFormControl.cs",
+              "RelativeToolTip": "..\\WindowsFormsControlLibrary\\LoginFormControl.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:14:28.568Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginFormControl.cs [Design]",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\WindowsFormsControlLibrary\\LoginFormControl.cs",
+              "RelativeDocumentMoniker": "..\\WindowsFormsControlLibrary\\LoginFormControl.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\WindowsFormsControlLibrary\\LoginFormControl.cs [Design]",
+              "RelativeToolTip": "..\\WindowsFormsControlLibrary\\LoginFormControl.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T22:14:25.991Z",
+              "EditorCaption": " [Design]"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

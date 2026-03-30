@@ -1,0 +1,7 @@
+D:\ITI\OOP\TASKS\day5-class\obj\Debug\day5-class.csproj.AssemblyReference.cache
+D:\ITI\OOP\TASKS\day5-class\obj\Debug\day5-class.csproj.CoreCompileInputs.cache
+D:\ITI\OOP\TASKS\day5-class\bin\Debug\day5-class.exe.config
+D:\ITI\OOP\TASKS\day5-class\bin\Debug\day5-class.exe
+D:\ITI\OOP\TASKS\day5-class\bin\Debug\day5-class.pdb
+D:\ITI\OOP\TASKS\day5-class\obj\Debug\day5-class.exe
+D:\ITI\OOP\TASKS\day5-class\obj\Debug\day5-class.pdb

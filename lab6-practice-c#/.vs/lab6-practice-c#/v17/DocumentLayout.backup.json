@@ -1,0 +1,53 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\ITI\\visual c#\\tasks\\lab6-practice-c#\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F445B5FF-8764-4720-8687-D01F2596191D}|..\\lab6-part2-c#\\lab6-part2-c#.csproj|d:\\iti\\visual c#\\tasks\\lab6-part2-c#\\employee.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{78F5924B-75B7-4EBE-874F-B1214FF71DC3}|lab6-practice-c#.csproj|d:\\iti\\visual c#\\tasks\\lab6-practice-c#\\libraryengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{78F5924B-75B7-4EBE-874F-B1214FF71DC3}|lab6-practice-c#.csproj|solutionrelative:libraryengine.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "LibraryEngine.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\lab6-practice-c#\\LibraryEngine.cs",
+              "RelativeDocumentMoniker": "LibraryEngine.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\lab6-practice-c#\\LibraryEngine.cs",
+              "RelativeToolTip": "LibraryEngine.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABYAAAAlAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T12:49:49.601Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Employee.cs",
+              "DocumentMoniker": "D:\\ITI\\visual c#\\tasks\\lab6-part2-c#\\Employee.cs",
+              "RelativeDocumentMoniker": "..\\lab6-part2-c#\\Employee.cs",
+              "ToolTip": "D:\\ITI\\visual c#\\tasks\\lab6-part2-c#\\Employee.cs",
+              "RelativeToolTip": "..\\lab6-part2-c#\\Employee.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADIAAABiAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-13T17:31:48.081Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

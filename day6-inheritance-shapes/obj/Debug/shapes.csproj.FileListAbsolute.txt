@@ -1,0 +1,7 @@
+D:\ITI\OOP\TASKS\day6-inheritance-shapes\obj\Debug\shapes.csproj.AssemblyReference.cache
+D:\ITI\OOP\TASKS\day6-inheritance-shapes\obj\Debug\shapes.csproj.CoreCompileInputs.cache
+D:\ITI\OOP\TASKS\day6-inheritance-shapes\bin\Debug\day6-inheritance-shapes.exe.config
+D:\ITI\OOP\TASKS\day6-inheritance-shapes\bin\Debug\day6-inheritance-shapes.exe
+D:\ITI\OOP\TASKS\day6-inheritance-shapes\bin\Debug\day6-inheritance-shapes.pdb
+D:\ITI\OOP\TASKS\day6-inheritance-shapes\obj\Debug\day6-inheritance-shapes.exe
+D:\ITI\OOP\TASKS\day6-inheritance-shapes\obj\Debug\day6-inheritance-shapes.pdb

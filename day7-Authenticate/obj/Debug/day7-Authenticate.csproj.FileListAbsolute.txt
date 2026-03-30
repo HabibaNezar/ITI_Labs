@@ -1,0 +1,7 @@
+D:\ITI\OOP\TASKS\day7-Authenticate\bin\Debug\day7-Authenticate.exe.config
+D:\ITI\OOP\TASKS\day7-Authenticate\bin\Debug\day7-Authenticate.exe
+D:\ITI\OOP\TASKS\day7-Authenticate\bin\Debug\day7-Authenticate.pdb
+D:\ITI\OOP\TASKS\day7-Authenticate\obj\Debug\day7-Authenticate.csproj.AssemblyReference.cache
+D:\ITI\OOP\TASKS\day7-Authenticate\obj\Debug\day7-Authenticate.csproj.CoreCompileInputs.cache
+D:\ITI\OOP\TASKS\day7-Authenticate\obj\Debug\day7-Authenticate.exe
+D:\ITI\OOP\TASKS\day7-Authenticate\obj\Debug\day7-Authenticate.pdb
