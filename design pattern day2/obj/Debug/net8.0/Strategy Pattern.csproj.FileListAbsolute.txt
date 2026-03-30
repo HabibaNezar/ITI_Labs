@@ -1,0 +1,14 @@
+D:\ITI\visual c#\tasks\design pattern day2\bin\Debug\net8.0\Strategy Pattern.exe
+D:\ITI\visual c#\tasks\design pattern day2\bin\Debug\net8.0\Strategy Pattern.deps.json
+D:\ITI\visual c#\tasks\design pattern day2\bin\Debug\net8.0\Strategy Pattern.runtimeconfig.json
+D:\ITI\visual c#\tasks\design pattern day2\bin\Debug\net8.0\Strategy Pattern.dll
+D:\ITI\visual c#\tasks\design pattern day2\bin\Debug\net8.0\Strategy Pattern.pdb
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\Strategy Pattern.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\Strategy Pattern.AssemblyInfoInputs.cache
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\Strategy Pattern.AssemblyInfo.cs
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\Strategy Pattern.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\Strategy Pattern.dll
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\refint\Strategy Pattern.dll
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\Strategy Pattern.pdb
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\Strategy Pattern.genruntimeconfig.cache
+D:\ITI\visual c#\tasks\design pattern day2\obj\Debug\net8.0\ref\Strategy Pattern.dll

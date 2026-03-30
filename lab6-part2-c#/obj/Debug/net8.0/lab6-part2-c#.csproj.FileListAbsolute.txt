@@ -1,0 +1,14 @@
+D:\ITI\visual c#\tasks\lab6-part2-c#\bin\Debug\net8.0\lab6-part2-c#.exe
+D:\ITI\visual c#\tasks\lab6-part2-c#\bin\Debug\net8.0\lab6-part2-c#.deps.json
+D:\ITI\visual c#\tasks\lab6-part2-c#\bin\Debug\net8.0\lab6-part2-c#.runtimeconfig.json
+D:\ITI\visual c#\tasks\lab6-part2-c#\bin\Debug\net8.0\lab6-part2-c#.dll
+D:\ITI\visual c#\tasks\lab6-part2-c#\bin\Debug\net8.0\lab6-part2-c#.pdb
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\lab6-part2-c#.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\lab6-part2-c#.AssemblyInfoInputs.cache
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\lab6-part2-c#.AssemblyInfo.cs
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\lab6-part2-c#.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\lab6-part2-c#.dll
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\refint\lab6-part2-c#.dll
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\lab6-part2-c#.pdb
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\lab6-part2-c#.genruntimeconfig.cache
+D:\ITI\visual c#\tasks\lab6-part2-c#\obj\Debug\net8.0\ref\lab6-part2-c#.dll

@@ -1,0 +1,14 @@
+D:\ITI\visual c#\tasks\day3Lab-visualC#\bin\Debug\net8.0\day3Lab-visualC#(Emplyee).exe
+D:\ITI\visual c#\tasks\day3Lab-visualC#\bin\Debug\net8.0\day3Lab-visualC#(Emplyee).deps.json
+D:\ITI\visual c#\tasks\day3Lab-visualC#\bin\Debug\net8.0\day3Lab-visualC#(Emplyee).runtimeconfig.json
+D:\ITI\visual c#\tasks\day3Lab-visualC#\bin\Debug\net8.0\day3Lab-visualC#(Emplyee).dll
+D:\ITI\visual c#\tasks\day3Lab-visualC#\bin\Debug\net8.0\day3Lab-visualC#(Emplyee).pdb
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\day3Lab-visualC#(Emplyee).GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\day3Lab-visualC#(Emplyee).AssemblyInfoInputs.cache
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\day3Lab-visualC#(Emplyee).AssemblyInfo.cs
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\day3Lab-visualC#(Emplyee).csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\day3Lab-visualC#(Emplyee).dll
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\refint\day3Lab-visualC#(Emplyee).dll
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\day3Lab-visualC#(Emplyee).pdb
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\day3Lab-visualC#(Emplyee).genruntimeconfig.cache
+D:\ITI\visual c#\tasks\day3Lab-visualC#\obj\Debug\net8.0\ref\day3Lab-visualC#(Emplyee).dll

@@ -1,0 +1,14 @@
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\bin\Debug\WindowsFormsApp-LoginForm.exe
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\bin\Debug\WindowsFormsControlLibrary.dll
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\bin\Debug\WindowsFormsControlLibrary.pdb
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsFormsApp-LoginForm.csproj.AssemblyReference.cache
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsFormsApp_LoginForm.Form1.resources
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsFormsApp_LoginForm.Form2.resources
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsFormsApp_LoginForm.Properties.Resources.resources
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsFormsApp-LoginForm.csproj.GenerateResource.cache
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsFormsApp-LoginForm.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsFormsApp-LoginForm.exe
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsFormsApp-LoginForm.pdb
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\bin\Debug\WindowsFormsApp-LoginForm.exe.config
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\bin\Debug\WindowsFormsApp-LoginForm.pdb
+D:\ITI\visual c#\tasks\WindowsFormsApp-LoginForm\obj\Debug\WindowsF.8A9BAAE5.Up2Date

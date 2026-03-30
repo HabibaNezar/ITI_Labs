@@ -1,0 +1,14 @@
+D:\ITI\visual c#\tasks\day6-c#\bin\Debug\net8.0\day6-c#.exe
+D:\ITI\visual c#\tasks\day6-c#\bin\Debug\net8.0\day6-c#.deps.json
+D:\ITI\visual c#\tasks\day6-c#\bin\Debug\net8.0\day6-c#.runtimeconfig.json
+D:\ITI\visual c#\tasks\day6-c#\bin\Debug\net8.0\day6-c#.dll
+D:\ITI\visual c#\tasks\day6-c#\bin\Debug\net8.0\day6-c#.pdb
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\day6-c#.GeneratedMSBuildEditorConfig.editorconfig
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\day6-c#.AssemblyInfoInputs.cache
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\day6-c#.AssemblyInfo.cs
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\day6-c#.csproj.CoreCompileInputs.cache
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\day6-c#.dll
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\refint\day6-c#.dll
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\day6-c#.pdb
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\day6-c#.genruntimeconfig.cache
+D:\ITI\visual c#\tasks\day6-c#\obj\Debug\net8.0\ref\day6-c#.dll
