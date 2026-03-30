@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task1</title>
+
+    <script>
+      window.addEventListener("load", function () {
+        class Shapes {
+          //private property
+          #color;
+          constructor(color) {
+            this.#color = color;
+          }
+
+          //setter
+          set Color(value) {
+            this.#color = value;
+          }
+
+          //getter
+
+          get Color() {
+            return this.#color;
+          }
+
+          DrawShape() {
+            console.log(`Drawing Shape with color : ${this.#color}`);
+          }
+        }
+
+        class Rectangle extends Shapes {
+          constructor(color, width, height) {
+            super(color);
+            this.width = width;
+            this.height = height;
+          }
+
+          getArea() {
+            this.DrawShape();
+            return this.width * this.height;
+          }
+        }
+
+        class Square extends Rectangle {
+          constructor(color, sideLength) {
+            super(color, sideLength, sideLength);
+          }
+        }
+
+        class Circle extends Shapes {
+          constructor(color, radius, x, y) {
+            super(color);
+            this.radius = radius;
+            this.x = x;
+            this.y = y;
+          }
+
+          getArea() {
+            const pi = Math.PI;
+            this.DrawShape();
+            return pi * Math.pow(this.radius, 2);
+          }
+        }
+
+        // create rectangle
+        const myRectangle = new Rectangle("green", 5, 10);
+        console.log(`my rectangle area = ${myRectangle.getArea()}`);
+
+        // create square
+        const mySquare = new Square("red", 5, 5);
+        console.log(`my square area = ${mySquare.getArea()}`);
+
+        // create circle
+        const myCircle = new Circle("blue", 5, 2, 3);
+        console.log(`my circle area = ${myCircle.getArea()}`);
+      });
+    </script>
+  </head>
+
+  <body></body>
+</html>

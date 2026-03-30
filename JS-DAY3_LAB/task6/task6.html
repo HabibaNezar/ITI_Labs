@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+
+    <style>
+        label{
+            display: inline-block;
+            width: 170px;
+            margin-bottom: 20px;
+        }
+        div{
+            margin-bottom: 20px;
+        }
+        img{
+            width: 150px;
+            height: 150px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div>
+        <label>enter your name</label>
+        <input type="text" id="userName">
+    </div>
+    <div>
+        <label>enter your age</label>
+        <input type="number" id="number">
+    </div>
+
+    <label>enter your gender</label>
+    <div>
+        <input type="radio" name="gender" id="male" value="male">
+        <label for="male">
+            <img src="./male.png">
+        </label>
+
+        <input type="radio" name="gender" id="female" value="female">
+        <label for="female">
+            <img src="./female.png">
+        </label>
+    </div>
+
+    <div>
+        <label>select your favourite color</label>
+        <select id="favColor">
+            <option value="red">red</option>
+            <option value="green">green</option>
+            <option value="blue">blue</option>
+        </select>
+    </div>
+
+    <button onclick="openPopupWindow()">Register</button>
+
+    <script>
+        function openPopupWindow() {
+
+            var name = document.getElementById("userName").value;
+            var color = document.getElementById("favColor").value;
+            var gender = document.querySelector('input[name="gender"]:checked').value;
+
+            open(
+                `popUpWindow.html?name=${name}&color=${color}&gender=${gender}`,
+                "popUpWindow",
+                "height=300,width=500,top=100,left=100"
+            );
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    margin: auto;
+    position: relative;
+}
+
+#main-section{
+    border: 2px solid yellow;
+    position: relative;
+    width: 80vw;
+    height: 70vh;
+    margin: 80px auto;
+}
+
+#main-section h1{
+    border: 2px solid yellow;
+    width: fit-content;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translate(-50%);
+    padding-inline: 10px;
+    background-color: white;
+    color: rgb(25, 176, 245);
+}
+
+#main-section h1 span{
+    color: black;
+}
+
+#slide{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+#slide img{
+    width: 550px;
+    height: 350px;
+    border: 2px yellow solid;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#slide .buttons {
+    width: 100%;
+    margin-inline: auto;
+    padding-block: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+button{
+    padding-inline: 40px;
+    padding-block: 5px;
+    border-radius: 2px;
+    cursor: pointer;
+    color: white;
+    font-weight: 500;
+    font-size: medium;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+#previous , #next {
+    background-color: rgb(225, 238, 40);
+    border: yellow;
+    border-radius: 2px;
+}
+
+#previous:hover , #next:hover{
+    background-color: rgb(209, 221, 47);
+}
+
+#play{
+    background-color: green;
+    border: green;
+}
+
+#play:hover{
+    background-color: rgb(5, 95, 5);
+}
+
+
+#stop{
+    background-color: rgb(202, 28, 28);
+    border: red;
+}
+
+#stop:hover{
+    background-color: rgb(158, 30, 30);
+}

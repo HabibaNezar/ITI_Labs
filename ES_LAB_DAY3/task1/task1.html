@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task1</title>
+    <style>
+      * {
+        margin: 0px;
+        padding: 0px;
+      }
+      div#names {
+        background-color: rgb(82, 130, 183);
+        padding: 16px;
+      }
+
+      button {
+        margin: 5px;
+        background-color: rgb(177, 235, 243);
+        border: 2px solid rgb(177, 235, 243);
+        cursor: pointer;
+        padding-inline: 20px;
+        padding-block: 5px;
+        border-radius: 10px;
+      }
+
+      button:hover {
+        background-color: pink;
+        border: 2px solid pink;
+      }
+      div#nameDetails {
+        background-color: pink;
+      }
+
+      div#nameDetails ul li {
+        padding: 2px;
+        color: rgb(60, 60, 60);
+      }
+    </style>
+  </head>
+  <body>
+    <div id="names"></div>
+    <div id="nameDetails">
+      <ul id="myUl"></ul>
+    </div>
+
+    <script>
+      let myNames = document.getElementById("names");
+      let myUl = document.getElementById("myUl");
+
+      // Display all Names
+      async function dispalyNames() {
+        let allData = await fetch("https://jsonplaceholder.typicode.com/users");
+        let allJsonData = await allData.json();
+
+        allJsonData.forEach((data) => {
+          let myButton = document.createElement("button");
+          myButton.textContent = data.name;
+          myButton.id = data.id;
+          myNames.appendChild(myButton);
+
+          // event listener
+          myButton.addEventListener("click", function () {
+            displayNameDatails(this.id);
+          });
+        });
+
+        console.log(allJsonData);
+      }
+
+      // display details of a name
+      async function displayNameDatails(id) {
+        let nameData = await fetch(
+          `https://jsonplaceholder.typicode.com/users/${id}`,
+        );
+        let jsonNameData = await nameData.json();
+
+        // display on dom
+
+        myUl.innerHTML = ``;
+
+        let myLi1 = document.createElement("li");
+        let myLi2 = document.createElement("li");
+        let myLi3 = document.createElement("li");
+        let myLi4 = document.createElement("li");
+        let myLi5 = document.createElement("li");
+
+        myLi1.innerHTML = `<strong>Name: </strong> ${jsonNameData.name}`;
+        myLi2.innerHTML = `<strong>Email: </strong> ${jsonNameData.email}`;
+        myLi3.innerHTML = `<strong>Phone: </strong> ${jsonNameData.phone}`;
+        myLi4.innerHTML = `<strong>Website: </strong> ${jsonNameData.website}`;
+        myLi5.innerHTML = `<strong>userName: </strong>  ${jsonNameData.username}`;
+
+        myUl.style.padding = "20px";
+
+        myUl.append(myLi1, myLi2, myLi3, myLi4, myLi5);
+
+        console.log("hiiiiiiiiiiiiiiii", jsonNameData);
+      }
+      dispalyNames();
+      // displayNameDatails(1);
+    </script>
+  </body>
+</html>

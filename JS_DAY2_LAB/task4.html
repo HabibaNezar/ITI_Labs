@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task4</title>
+</head>
+<body>
+    <div>
+        <p id="name"></p>
+        <p id="number"></p>
+    </div>
+
+    <script>
+       var name = "";
+       var number = "";
+
+       while(true){
+        name = prompt("enter your name");
+        if(name && isNaN(name)){
+            break;
+        }
+        alert("please enter valid string name")
+       }
+
+       while(true){
+        number = prompt("enter your number")
+        number = number.trim();
+        var isvalidength = number.length == 11;
+        var isValidPrefix = number.slice(0,3)=="010" || number.slice(0,3)=="011" || number.slice(0,3)=="012" || number.slice(0,3)=="015";
+        var isValidNumber = !isNaN(number)
+
+        if(number && isValidNumber && isValidPrefix && isValidNumber){
+            break
+        }
+        alert("please enter valid mobile number")
+       }
+
+       document.getElementById("name").innerHTML += "your name: " + name;
+       document.getElementById("number").innerHTML += "your number: " + number;
+
+    </script>
+</body>
+</html>

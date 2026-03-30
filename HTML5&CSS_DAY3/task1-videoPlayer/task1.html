@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>video player</title>
+    <!-- <link rel="stylesheet" href="../bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="./task1.css" />
+    <script>
+      window.addEventListener("load", function () {
+        let allButtons = document.querySelectorAll(".allVideosWrapper button");
+        let myVideo = document.getElementById("myVideo");
+        let playBtn = document.getElementById("play");
+        let mediaSize = document.getElementById("mediaSize");
+        let volume = document.getElementById("volume");
+        let muteOrloop = document.getElementById("muteOrloop");
+        let time = document.getElementById("time");
+        let speed = document.getElementById("speed");
+
+        // pre assigned
+        myVideo.volume = 0;
+        myVideo.loop = true;
+
+        // play button
+        playBtn.addEventListener("click", function () {
+          if (myVideo.paused) {
+            myVideo.play();
+            this.innerText = "pause";
+          } else {
+            myVideo.pause();
+            this.innerText = "play";
+          }
+        });
+
+        // double click for full screen
+        myVideo.addEventListener("dblclick", function () {
+          myVideo.requestFullscreen();
+        });
+
+        // all videos i have
+        allButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            allButtons.forEach((b) => {
+              b.classList.remove("active");
+            });
+            myVideo.src = "./video/universe.mp4";
+            this.classList.add("active");
+          });
+        });
+
+        // media size
+        mediaSize.addEventListener("change", function (e) {
+          switch (e.target.value) {
+            case "s":
+              myVideo.style.width = "50%";
+              break;
+            case "m":
+              myVideo.style.width = "80%";
+              break;
+            case "lg":
+              myVideo.style.width = "100%";
+              break;
+            case "full":
+              myVideo.requestFullscreen();
+              break;
+          }
+        });
+
+        // volume
+        volume.addEventListener("change", function (e) {
+          myVideo.volume = e.target.value;
+        });
+
+        // muteOrloop
+        muteOrloop.addEventListener("change", function (e) {
+          if (e.target.value === "loop") {
+            myVideo.loop = true;
+          } else if (e.target.value === "mute") {
+            myVideo.muted = true;
+          }
+        });
+
+        // time
+        time.addEventListener("change", function (e) {
+          myVideo.currentTime = e.target.value * myVideo.duration;
+        });
+        myVideo.addEventListener("timeupdate", function () {
+          time.value = myVideo.currentTime / myVideo.duration;
+        });
+
+        // speed
+        speed.addEventListener("change", function (e) {
+          switch (e.target.value) {
+            case "fast":
+              myVideo.playbackRate++;
+              break;
+            case "slow":
+              myVideo.playbackRate--;
+              if (myvideo.playbackRate <= 0) myvideo.playbackRate = 1;
+              break;
+            case "slowmotion":
+              myVideo.playbackRate = 0.5;
+              break;
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="mainWrapper">
+      <div class="allVideosWrapper">
+        <button>Video 1</button>
+        <button>Video 2</button>
+        <button>Video 3</button>
+        <button>Video 4</button>
+        <button>Video 5</button>
+        <button>Video 6</button>
+        <button>Video 7</button>
+        <button>Video 8</button>
+        <button>Video 9</button>
+        <button>Video 10</button>
+      </div>
+      <div class="videoWrapper">
+        <div class="second-controller">
+          <div>
+            <label for="">volume</label>
+            <input
+              id="volume"
+              type="range"
+              value="0"
+              min="0"
+              max="1"
+              step="0.1"
+            />
+          </div>
+
+          <div>
+            <select name="mediaSize" id="mediaSize">
+              <option value="" selected disabled hidden>
+                select media size
+              </option>
+              <option value="s">s</option>
+              <option value="m">m</option>
+              <option value="lg">lg</option>
+              <option value="full">full</option>
+            </select>
+
+            <select name="" id="speed">
+              <option value="" selected disabled hidden>speed</option>
+              <option value="fast">fast</option>
+              <option value="slow">slow</option>
+              <option value="slowmotion">slow motion</option>
+            </select>
+          </div>
+        </div>
+        <video id="myVideo" src="./video/universe.mp4" controls></video>
+
+        <div class="main-controller">
+          <button id="play">Play</button>
+          <input id="time" type="range" value="0" min="0" max="1" step="any" />
+
+          <select name="muteOrloop" id="muteOrloop">
+            <option value="loop">loop</option>
+            <option value="mute">mute</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

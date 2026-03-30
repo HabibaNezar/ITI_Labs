@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4.2</title>
+</head>
+<body>
+    
+    
+    <script>
+        var n = prompt("enter your number");
+        var number = parseInt(n);
+        var formattedNumber1 = new Intl.NumberFormat("en-US").format(number);
+        var formattedNumber2 = new Intl.NumberFormat("de-DE").format(number);
+        var formattedNumber3 = new Intl.NumberFormat("ar-EG").format(number);
+        var formattedNumber4 = new Intl.NumberFormat("ja-JP").format(number);
+
+        console.log(formattedNumber1)
+        console.log(formattedNumber2)
+        console.log(formattedNumber3)
+        console.log(formattedNumber4)
+    </script>
+</body>
+</html>

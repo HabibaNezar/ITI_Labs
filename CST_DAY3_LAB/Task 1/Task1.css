@@ -1,0 +1,108 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.home{
+    background-image: url(./pattern.png);
+    height: 100vh;
+    width: 100vw;
+    padding: 2px; /* important to prevent margin cllapsing*/
+}
+
+.frame{
+    width: 50%;
+    height: 80%;
+    margin: auto;
+    margin-top: 50px;
+    background-color: white;
+    border-top: 5px solid rgb(183, 174, 174) ;
+    border-left: 5px solid rgb(183, 174, 174) ;
+    border-right: 5px solid rgb(73, 72, 72) ;
+    border-bottom: 5px solid rgb(73, 72, 72) ;
+    box-shadow: 
+        inset -5px 0 0 rgb(183, 174, 174),
+        inset 5px 0 0 rgb(73, 72, 72),
+        inset 0 -5px 0 rgb(183, 174, 174),
+        inset 0 5px 0 rgb(73, 72, 72);
+}
+
+header{
+    width: 90%;
+    background-color: #FFBCAB;
+    border: 3px solid gray;
+    margin: auto;
+    margin-top: 30px;
+    padding-left: 20px;
+    padding-block: 10px;
+    position: relative;
+}
+
+header img{
+    width: 70px;
+}
+
+
+
+header .img2{
+    position: absolute;
+    right: 0;
+}
+
+header p{
+    font-family: "Pinyon Script", cursive;
+    font-size: 30px;
+    font-weight: 500;
+    display: inline;
+    position: absolute;
+    top: 30%;
+    left: 25%;
+}
+
+.links{
+    font-size: 11px;
+    background-color: #FFBCAB;
+    border: 3px solid gray;
+    padding-inline: 30px;
+    padding-block: 10px;
+    margin-block: 20px;
+    margin-inline: 23px;
+}
+
+.links a{
+    color: red;
+}
+
+.content{
+    background-color: #FFBCAB;
+    border: 3px solid gray;
+    padding-inline: 30px;
+    padding-block: 10px;
+    margin-block: 20px;
+    margin-inline: 23px;
+}
+
+.content h3{
+    margin-block: 10px;
+}
+
+.content p{
+    margin-bottom: 20px;
+}
+
+.content img{
+    width: 20px;
+    margin-right: 5px;
+}
+
+.content a{
+    color: red;
+}
+
+footer p{
+    background-color: #FFBCAB;
+    padding-inline: 100px;
+    margin-block: 20px;
+    margin-inline: 23px;
+}

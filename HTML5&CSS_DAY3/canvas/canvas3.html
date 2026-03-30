@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>canvas3</title>
+    <style>
+      body {
+        overflow: hidden;
+      }
+    </style>
+    <script>
+      let mycanvas;
+      let mycontext;
+      window.addEventListener("load", doitfirst);
+      function doitfirst() {
+        mycanvas = document.getElementById("mycanvas");
+        mycontext = mycanvas.getContext("2d");
+        mycanvas.width = window.innerWidth;
+        mycanvas.height = window.innerHeight;
+
+        mycanvas.addEventListener("mousedown", drawsquare);
+
+        function drawsquare(e) {
+          mycontext.clearRect(0, 0, mycanvas.width, mycanvas.height);
+          mycontext.beginPath();
+          mycontext.fillRect(e.clientX, e.clientY, 20, 20);
+          mycontext.fill();
+          mycontext.closePath();
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <canvas id="mycanvas"></canvas>
+  </body>
+</html>

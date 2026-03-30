@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4.1</title>
+</head>
+<body>
+    
+
+    <p id="result"> Target Number = </p>
+
+    <script>
+        var userNumber = prompt("enter your user name")
+        var initialRadix = prompt("enter first radix")
+        var targetRadix = prompt("enter target radix")
+
+        initialRadix = parseInt(initialRadix);
+        targetRadix = parseInt(targetRadix);
+
+        var decimalNumber = parseInt(userNumber, initialRadix);
+        var targetNumber = decimalNumber.toString(targetRadix);
+
+        document.getElementById("result").innerHTML += targetNumber
+
+
+    </script>
+</body>
+</html>

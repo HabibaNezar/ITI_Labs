@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>
+        your string in pascal case is: <span id="result"></span>
+    </p>
+    
+    <script>
+        var str = "";
+        while(true){
+            str = prompt("enter a string")
+            if(str && isNaN(str) && isNaN(str[0])){
+                break;
+            }
+            alert("please enter a valid string not number")
+        }
+
+        var myStrAsArr = str.split(" ");
+        for(var i=0 ; i<myStrAsArr.length ; i++){
+            if(myStrAsArr[i].length == 0){
+                myStrAsArr.splice(i,1);
+            }
+            myStrAsArr[i].toLowerCase();
+        }
+        var modifiedArr = myStrAsArr.map(function(val){
+            return val[0].toUpperCase() + val.slice(1 , val.length);
+        });
+
+        var arrToStr = modifiedArr.join(" ");
+        document.getElementById("result").innerHTML += arrToStr;
+
+        console.log(arrToStr);
+        
+    </script>
+</body>
+</html>

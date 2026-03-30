@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #info{
+            width: 100vw;
+            background-color: rgb(236, 235, 235);
+            padding: 50px;
+        }
+        #info div{
+            width: 50%;
+            /* background-color: aqua; */
+            padding-block: 10px;
+        }
+        table{
+            border: 2px solid black;
+            width: 70%;
+            margin: 10px auto;
+            padding: 2px;
+            border-spacing: 2px;
+            text-align: center;
+        }
+        td,th{
+            border: 2px solid black;
+            padding: 2px;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        window.addEventListener("load",
+            function(){
+                // --- COOKIE HELPER FUNCTIONS ---
+                function setCookie(cname, cvalue, exdays) {
+                    const d = new Date();
+                    d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+                    let expires = "expires="+d.toUTCString();
+                    // We use encodeURIComponent to handle special characters in JSON
+                    document.cookie = cname + "=" + encodeURIComponent(cvalue) + ";" + expires + ";path=/";
+                }
+
+                function getCookie(cname) {
+                    let name = cname + "=";
+                    let ca = document.cookie.split(';');
+                    for(let i = 0; i < ca.length; i++) {
+                        let c = ca[i];
+                        while (c.charAt(0) == ' ') {
+                            c = c.substring(1);
+                        }
+                        if (c.indexOf(name) == 0) {
+                            // Decode the cookie value
+                            return decodeURIComponent(c.substring(name.length, c.length));
+                        }
+                    }
+                    return "";
+                }
+                
+                function deleteCookie(cname) {
+                    // بنخلي الـ expires تاريخ قديم جداً (سنة 1970)
+                    document.cookie = cname + "=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                }
+                // -------------------------------
+                
+                var newsContent = []
+                var id = 0;
+
+                // 1. LOAD DATA FROM COOKIES ON START
+                var savedData = getCookie("newsData");
+                if(savedData) {
+                    try {
+                        newsContent = JSON.parse(savedData);
+                        // Update ID to ensure we don't duplicate IDs if we add new items
+                        if(newsContent.length > 0) {
+                            id = newsContent[newsContent.length - 1].id + 1;
+                        }
+                        // Display loaded data immediately
+                        display(newsContent);
+                    } catch(e) {
+                        console.error("Error parsing cookie data", e);
+                    }
+                }
+                // deleteCookie("newsData")
+                // -------------------------------
+
+                function isThisTitleExist(title){
+                    return newsContent.some((val)=> val.title === title)
+                }
+                
+                function searchByTitle(title){
+                    if(title.trim() === "") return newsContent;
+                    return newsContent.filter((val)=> val.title.includes(title))
+                }
+
+                function display(items){
+                    //displaay
+                    var myTable = document.getElementById("myTable");
+
+                    myTable.innerHTML = `
+                        <tr>
+                            <th>News Type</th>
+                            <th>News Title</th>
+                        </tr>    
+                    `
+
+                    for(var i=0 ; i<items.length ; i++){
+                        var newRow = document.createElement("tr")
+                        var td1 = document.createElement("td")
+
+                        td1.appendChild(document.createTextNode(items[i].type));
+                        newRow.appendChild(td1);
+
+                        var td2 = document.createElement("td")
+                        td2.appendChild(document.createTextNode(items[i].title))
+                        newRow.appendChild(td2)
+
+                        myTable.appendChild(newRow)
+                    }
+                    
+
+                }
+
+                var addButton = document.getElementById("addButton").addEventListener("click" , function(){
+                    // title
+                    var newsTitle = document.getElementById("newsTitle").value;
+                    var flag = false;
+                    
+                    // type
+                    var radios = document.getElementsByName("newsType");
+                    var newsType;
+                    var newsTypeIndex;
+                    for(var i=0 ; i<radios.length ; i++){
+                        if(radios[i].checked){
+                            newsType = radios[i].value
+                            newsTypeIndex = i;
+                        }
+                    }
+
+                    //validation
+                    if(!newsType || !newsTitle){
+                        alert("you should enter all values")
+                        return;
+                    }
+                    else if(isThisTitleExist(newsTitle) || newsTitle.trim().length == 0){
+                        alert("enter a valid title")
+                        return;
+                    }
+                    else{
+                        newsContent.push({
+                            id: id,
+                            type: newsType,
+                            title: newsTitle
+                        })
+                        id++;
+
+                        // 2. SAVE TO COOKIE AFTER ADDING
+                        // Save for 7 days
+                        setCookie("newsData", JSON.stringify(newsContent), 1);
+                        // -------------------------------
+
+                        //reset
+                        document.getElementById("newsTitle").value = "";
+                        document.getElementsByName("newsType")[newsTypeIndex].checked = false;
+                    }
+
+                    //display
+                    display(newsContent)
+                    console.log(newsContent)
+                        })
+                    
+                var searchValue = document.getElementById("search").addEventListener("input" , (e)=>{
+                    var inputValue = e.target.value;
+                    var result = searchByTitle(inputValue);
+
+                    display(result);
+                    console.log(result)
+                });
+                
+
+            }
+        )
+    </script>
+</head>
+<body>
+    <div id="info">
+        <div id="newsType">
+            <label for="">News Type: </label>
+            <input name="newsType" type="radio" id="sport" value="sport">
+            <label for="sport">sport</label>
+            <input name="newsType" type="radio" id="social" value="social">
+            <label for="social">social</label>
+            <input name="newsType" type="radio" id="politic" value="politic">
+            <label for="politic">politic</label>
+        </div>
+        <div id="newsTitlediv">
+            <input type="text" placeholder="Add News Title" id="newsTitle">
+            <button id="addButton">Add</button>
+        </div>
+        <div id="searchdiv">
+            <label for="search">Search: </label>
+            <input type="text" id="search">
+        </div>
+    </div>
+
+    <div id="content">
+        <table id="myTable">
+            <tr>
+                <th>News Type</th>
+                <th> News Title</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

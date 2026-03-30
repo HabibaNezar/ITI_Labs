@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>hi</h1>
+
+    <script>
+        var text = "Your message will displayed character by character :) <br> few seconds and the window will terminate..."
+
+        var textChar = text.split("");
+
+        var div = document.createElement("div");
+        document.body.appendChild(div)
+        var i=0;
+
+        var display = setInterval(function(){
+            if(text[i] == "<"){
+                var tag = "";
+                while(text[i] !== ">" && i<text.length){
+                    tag += text[i];
+                    i++;
+                }
+                tag += ">";
+                div.innerHTML += tag
+                i++;
+            }
+            else{
+                div.innerHTML += textChar[i]
+                i++
+            }
+            if(i == textChar.length){
+                clearInterval(display)
+                setTimeout(()=>{window.close()},500)
+            }
+        },100)
+
+    </script>
+</body>
+</html>

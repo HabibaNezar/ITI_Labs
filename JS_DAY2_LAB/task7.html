@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 7</title>
+</head>
+<body>
+
+    <p id="result1"></p>
+    <p id="result2"></p>
+    
+    <script>
+        var arr= ["ahmed" , "ali" , "moustafa" , "ibraheem" , "alaa" , "hamada"]
+        function getRndInteger(min, max) {
+            return Math.floor(Math.random() * (max - min) ) + min;
+        }
+
+        document.getElementById("result1").innerHTML += arr[getRndInteger(0,arr.length-1)]
+        document.getElementById("result2").innerHTML += arr[getRndInteger(0,arr.length-1)]
+    </script>
+</body>
+</html>

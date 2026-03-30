@@ -1,0 +1,144 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>task4</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./task4.css" />
+
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      ul {
+        /*background-color:yellow;*/
+        display: flex;
+        justify-content: space-evenly;
+        min-height: 10vh;
+        align-items: center;
+      }
+      ul > li {
+        list-style: none;
+      }
+      ul > li > a {
+        text-decoration: none;
+        font: bold 15px verdana;
+        color: rgb(235 57 57);
+      }
+      ul > li > a:hover {
+        color: rgb(182 115 115);
+      }
+      .intro {
+        height: 90vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-image: url(images/laptop_top.jpg);
+        background-position: center;
+        background-size: cover;
+        color: white;
+      }
+      .intro > h3 {
+        font-size: 1.5rem;
+        margin: 1.5rem;
+      }
+      .intro > button {
+        padding: 1.5rem 2rem;
+        border-radius: 0.5em;
+        font-weight: bold;
+        background: linear-gradient(to right, white, rgb(60 142 230));
+      }
+      .intro > button:hover {
+        background: linear-gradient(to left, white, rgb(60 142 230));
+      }
+    </style>
+  </head>
+  <body>
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Gallery</a></li>
+    </ul>
+    <section class="intro">
+      <h3>ITP Tracks , free scholarships for postgraduates ....</h3>
+      <button>Register</button>
+    </section>
+    <section class="location">
+      <div class="map"><img src="./map.png" alt="" /></div>
+      <div class="branches">
+        <div class="allBranshes">
+          <p><i class="fa-solid fa-location-dot"> ITI - Smart Village</i></p>
+          <p><i class="fa-solid fa-location-dot"> ITI - Tanta</i></p>
+          <p><i class="fa-solid fa-location-dot"> ITI - Assuit</i></p>
+          <p><i class="fa-solid fa-location-dot"> ITI - Aswan</i></p>
+          <p><i class="fa-solid fa-location-dot"> ITI - Ismailia</i></p>
+          <p><i class="fa-solid fa-location-dot"> ITI - Mansourra</i></p>
+          <p><i class="fa-solid fa-location-dot"> ITI - Menofia</i></p>
+          <p><i class="fa-solid fa-location-dot"> ITI - Minya</i></p>
+        </div>
+        <div class="check">
+          <label for=""
+            ><input class="main" type="checkbox" name="main" id="main" />Main
+            Branch</label
+          >
+          <label for=""
+            ><input class="branch" type="checkbox" name="branch" id="branch" />
+            Branch</label
+          >
+        </div>
+      </div>
+    </section>
+    <section class="footer">
+      <div class="contacts">
+        <h3>Contact us</h3>
+        <p>
+          <i class="fa-solid fa-location-crosshairs"></i>
+          28 Km by Cairo / Alexandria Desert Road, 6 October, B148, Egypt
+        </p>
+        <p><i class="fa-solid fa-phone"></i>(+202) 353-55656</p>
+        <p><i class="fa-solid fa-envelope"></i>ITIinfo@iti.gov.eg</p>
+      </div>
+      <div class="social">
+        <h3>follow us</h3>
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-twitter"></i>
+        <i class="fa-brands fa-youtube"></i>
+      </div>
+    </section>
+
+    <script>
+      let myMain = document.getElementById("main");
+      let myBranch = document.getElementById("branch");
+
+      let myMainText = document.querySelector(".allBranshes p:nth-child(1)");
+      let myBranchText = document.querySelectorAll(
+        ".allBranshes p:nth-child(n+2)",
+      );
+      myMain.addEventListener("change", function () {
+        if (myMain.checked) {
+          myMainText.style = "color: rgb(149, 7, 7);";
+        } else {
+          myMainText.style.color = "";
+        }
+      });
+      myBranch.addEventListener("change", function () {
+        if (myBranch.checked) {
+          myBranchText.forEach((branch) => {
+            branch.style.color = "blue";
+          });
+        } else {
+          myBranchText.forEach((branch) => {
+            branch.style.color = "";
+          });
+        }
+      });
+    </script>
+  </body>
+</html>

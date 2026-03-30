@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2</title>
+    <style>
+        body{
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="countdown" style="text-align: center; margin: auto; margin-top: 130px; font-size: 50px ; color: white; background-color: rgba(0, 0, 0, 0.214); border-radius: 10px; width: fit-content; padding-inline: 30px; padding-block: 5px;"> your countdown </p>
+
+    <script>
+
+        // Images preload (put an image object called img in an array) 
+        var images = [];
+
+        for(var i=0 ; i<=10 ; i++){
+            var img = new Image();
+            img.src = `${i}.jpg`
+            images.push(img)
+        }
+        
+        var n = 10;
+        var myCountDown;
+
+        window.onload = function countDownIm(){
+            myCountDown = setInterval(function(){
+                if(n<0){
+                    endCountDown()
+                }    
+                document.body.style.backgroundImage = `url(${images[n].src})`;
+                document.getElementById("countdown").innerHTML = n;
+                n--;
+                            
+            } , 500)
+        }
+
+        function endCountDown(){
+            clearInterval(myCountDown);
+            setTimeout(()=>{window.close()},500)
+        }
+
+    </script>
+</body>
+</html>

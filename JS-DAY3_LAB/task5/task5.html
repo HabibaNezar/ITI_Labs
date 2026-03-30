@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 - Bottle Game</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="./task5.css">
+
+</head>
+<body>
+    <header>
+        <h3><span>Bottle </span>Game</h3>
+        <div class="stars">
+            <i class="fa-solid fa-star" style="color: gold;"></i>
+            <i class="fa-solid fa-star" style="color: gold; opacity: 0.5;"></i>
+            <i class="fa-solid fa-star" style="color: gold; opacity: 0.5;"></i>
+        </div>
+    </header>
+
+    <div class="main-img"></div>
+    
+    <p class="instruction">Write a function that take an array of persons' names and return two random names of them.</p>
+
+    <div class="io-row">
+        <div class="label-btn label-input">Input</div>
+        <div class="field-wrapper">
+            <span class="array-text">array</span>
+            <input type="text" id="input-field" class="display-field" readonly>
+        </div>
+    </div>
+
+    <div class="io-row">
+        <div class="label-btn label-output">Output</div>
+        <div class="field-wrapper">
+            <span class="array-text">array</span>
+            <input type="text" id="output-field" class="display-field" readonly>
+        </div>
+    </div>
+
+
+    <script>
+        
+        const personsNames = ["ahmed", "islam", "sandra", "Fatma", "Ali"];
+
+        function formatArrayToString(arr) {
+            const formattedItems = arr.map(item => `"${item}"`).join(', ');
+            return `[${formattedItems}]`;
+        }
+
+
+        function getTwoRandomNames(namesArray) {
+            if (namesArray.length < 2) {
+                console.error("Array must have at least two names");
+                return namesArray;
+            }
+
+            const tempArray = [...namesArray];
+            const selectedNames = [];
+
+            const randomIndex1 = Math.floor(Math.random() * tempArray.length);
+            selectedNames.push(tempArray.splice(randomIndex1, 1)[0]);
+
+            const randomIndex2 = Math.floor(Math.random() * tempArray.length);
+            selectedNames.push(tempArray[randomIndex2]);
+
+            return selectedNames;
+        }
+
+
+        window.onload = function() {
+            const inputField = document.getElementById('input-field');
+            inputField.value = formatArrayToString(personsNames);
+
+            const randomResult = getTwoRandomNames(personsNames);
+            const outputField = document.getElementById('output-field');
+            outputField.value = formatArrayToString(randomResult);
+        };
+
+    </script>
+</body>
+</html>

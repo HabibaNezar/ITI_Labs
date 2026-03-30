@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 2</title>
+</head>
+<body>
+    
+    <p>your result is: </p>
+    <div id="result"></div>
+    
+
+    <script>
+
+        var sum = 0;
+        do{
+            var n = prompt("enter number");
+            var myn = parseInt(n);
+            if(myn === 0){
+                break;
+            }
+            sum += myn;
+        }
+        while(sum<=100)
+        document.getElementById("result").innerHTML= sum;
+        
+
+    </script>
+</body>
+</html>

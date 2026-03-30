@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 6.2</title>
+</head>
+<body>
+    
+    <script>
+        var arr = [];
+        
+        while(true){
+            var n = prompt("enter your array size");
+            if(n && !isNaN(n)){
+                break;
+            }
+            else{
+                    alert("please enter a valid number")
+                }
+        }
+        
+        
+        for(var i=0 ; i<n ; i++){
+            while(true){
+                var number = prompt("enter array number " + (i+1));
+                if(number && !isNaN(+number)){
+                    arr.push(+number)
+                    break;
+                }
+                else{
+                    alert("please enter a valid number")
+                }
+            }
+            
+            
+        }
+
+        do{
+            var c = prompt(`plese enter 
+                            a : to display array with the same receiving order
+                            b : to display array with ascending order
+                            c : to display array with descending order
+                            d : to reversed version of original array 
+                            e : to display even numbers only from array if there no even numbers , display alert to inform user with that
+                            f : receive number from user then display all numbers from array which divisible by received number , if there no result inform user with that
+                            g : display new array with 30% discount for all numbers in original array
+                            h : display string which represent all numbers of array concated with ***
+                        `);
+            if(["a","b","c","d","e","f","g","h"].includes(c)){
+                
+                if(c == "a"){
+                document.write("<p>" + "array with the same receiving order " + arr + "</p>")
+                }
+                else if(c == "b"){
+                    document.write("<p>" + "array with ascending order " + arr.sort(function(a,b){return a-b;}) + "</p>");
+                }
+                else if(c == "c"){
+                    document.write("<p>" + "array with descending order " + arr.sort(function(a,b){return b-a;}) + "</p>");
+                }
+                else if(c == "d"){
+                    document.write("<p>" + "reversed version of original array " + arr.reverse() + "</p>");
+                }
+                else if(c == "e"){
+                    var ee = arr.filter(function(val){
+                        if(val % 2 == 0) {return val} ;
+                    })
+                    if(ee.length == 0){
+                        alert("there is no result")
+                    }
+                    document.write("<p>" + "even numbers " + ee + "</p>");
+                }
+                else if(c == "f"){
+                    var fnumber = prompt("enter number")
+                    var ff = arr.filter(function(val){
+                        if(val % +fnumber == 0) {return val} ;
+                    })
+                    if(ff.length == 0){
+                        // alert("thre is no result")
+                        ff = "thre is no result";
+                    }
+                    document.write("<p>" + "all numbers from array which divisible by received number " + ff + "</p>");
+                }
+                else if(c == "g"){
+                    var gg = arr.map(function(val){
+                         return val*0.7 ;
+                    })
+                    document.write("<p>" + "new array with 30% discount for all numbers in original array " + gg + "</p>");
+                }
+                else if(c == "h"){
+                    var hh = arr.join("***")
+                    document.write("<p>" + "string which represent all numbers of array concated with *** " + hh + "</p>");
+                }
+                }
+            
+                else{
+                    alert("plasea enter a valid choice")
+                } 
+            
+                var again = prompt("do you want another operation? y / n")
+
+        }while(again == "y")
+
+
+    </script>
+</body>
+</html>

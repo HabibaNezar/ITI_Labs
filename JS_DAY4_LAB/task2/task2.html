@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task2</title>
+
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+
+
+    <style>
+        header{
+            width: 100vw;
+            margin: 40px auto;
+        }
+        header h2{
+            text-align: center;
+            color: rgb(137, 4, 4);
+        }
+        header div.search{
+            margin: 2px auto;
+            width: 80vw;
+        }
+        header div.search input{
+            display: inline-block;
+            width: 70%;
+            padding: 5px;
+            border: 2px rgb(199, 198, 198) solid;
+            border-radius: 2px;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.344);
+            margin: 10px auto;
+        }
+        header div.search button{
+            padding-inline: 16px;
+            padding-block: 5px;
+            border-radius: 5px;
+            border: 2px gray solid;
+            background-color: gray;
+            color: white;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        header div.search button:hover{
+            background-color: rgb(105, 102, 102);
+        }
+
+        /* table style*/
+        table{
+            padding: 2px;
+            margin: 2px auto;
+            width: 90%;
+
+        }
+        td, th{
+            padding: 2px;
+            margin: 2px auto;
+            color: white;
+            background-color: rgb(157, 19, 19);
+        }
+
+        td{
+            background-color: rgb(216, 214, 214);
+            color: black;
+            margin: 2px auto;
+            text-align: center;
+            
+        }
+
+        table button{
+            background-color: transparent;
+            border: 0px;
+        }
+
+        table button i{
+            color: rgb(157, 19, 19);
+            cursor: pointer;
+        }
+
+        table button i:hover{
+            color: rgb(222, 60, 60);
+        }
+
+        table input{
+            cursor: pointer;
+        }
+    </style>
+
+    <script>
+        window.addEventListener("load",()=>{
+
+            var tasks = [];
+            id = 0;
+
+            function deleteRow(id){
+                tasks.splice(id,1)
+            }
+
+            function acheivedTask(id){
+                if(tasks[id].achieved === true){
+                    tasks[id].achieved = false
+                }
+                else{
+                     tasks[id].achieved = true
+                }
+                
+            }
+
+            function isfound(task){
+                return tasks.some((val) => val.task === task && val.achieved === false) 
+            }
+            
+            function tableDisplay(allTasks){
+                var myTable = document.getElementById("myTable");
+                myTable.innerHTML = `
+                    <tr>
+                        <th>Done</th>
+                        <th>Task</th>
+                        <th>Delete</th>
+                    </tr>
+                `
+                for(var i=0 ; i<allTasks.length ; i++){
+                    var newRow = document.createElement("tr");
+                    var td1 = document.createElement("td");
+                    var td2 = document.createElement("td");
+                    var td3 = document.createElement("td");
+
+                    newRow.id = i;
+                    td2.id = "task";
+                    
+                    var redioInput = document.createElement("input");
+                    redioInput.className = "input-btn"
+                    redioInput.type = "checkbox";
+
+                    var deleteButton = document.createElement("button");
+                    deleteButton.className ="delete-btn"
+                    deleteButton.innerHTML= `<i class="fa-solid fa-trash"></i>`;
+
+                    if(allTasks[i].achieved){
+                        td2.style.textDecoration = "line-through"
+                        redioInput.checked = true
+                    }
+                    else{
+                        td2.style.textDecoration = "none"
+                    }
+
+
+                    td1.appendChild(redioInput);
+                    td2.innerHTML = allTasks[i].task;
+                    td3.appendChild(deleteButton);
+
+                    newRow.appendChild(td1);
+                    newRow.appendChild(td2);
+                    newRow.appendChild(td3);
+
+                    myTable.appendChild(newRow);
+                }
+                
+            }
+            
+            var addButton = document.getElementById("myButton");
+            addButton.addEventListener("click" , ()=>{
+                var myInput = document.getElementById("search").value;
+                console.log("myInput " + myInput)
+                console.log("isfound(myInput)" + isfound(myInput))
+                
+                if(myInput && !isfound(myInput)){
+                    tasks.push({
+                    id: id,
+                    task: myInput,
+                    achieved: false
+                    })
+                    id++;
+                    tableDisplay(tasks);
+                    document.getElementById("search").value="";
+                }
+                else{
+                    alert("you should add a valid task")
+                }
+                console.log(tasks)
+            })
+
+            // event delegation
+            var myTable = document.getElementById("myTable");
+            myTable.addEventListener("click" , (e)=>{
+                var clickedDeletedBtn = e.target.closest(".delete-btn")
+                var clickedInput = e.target.closest("input");
+                var row = e.target.closest("tr")
+                if(clickedDeletedBtn){
+                    deleteRow(Number(row.id))
+                    tableDisplay(tasks)
+                    console.log("row.id" + row.id)
+                }
+                else if(clickedInput){
+                    acheivedTask(Number(row.id));
+                    tableDisplay(tasks)
+                }
+            })
+        })
+    </script>
+</head>
+<body>
+
+    <header>
+        <h2>To Do Organizer</h2>
+        <div class="search">
+            <input type="text" name="search" id="search" placeholder="Enter Task Name">
+            <button id="myButton">Add</button>
+        </div>
+    </header>
+    <table id="myTable">
+        <tr>
+            <th>Done</th>
+            <th>Task</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+    
+</body>
+</html>

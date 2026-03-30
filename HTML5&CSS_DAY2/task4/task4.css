@@ -1,0 +1,90 @@
+.location{
+    width: 100%;
+    min-height: 100%;
+    display: flex;
+    justify-content: space-between;
+    /* background-color: brown; */
+    margin-block: 32px;
+}
+
+.check .main{
+    accent-color: red;
+}
+.check .branch{
+    accent-color: rgb(0, 68, 255);
+    margin-left: 20px;
+}
+
+.map img{
+    width: 400px;
+    margin-left: 20px;
+}
+
+.branches{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    /* background-color: blue; */
+}
+
+.allBranshes{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: gray;
+}
+
+.allBranshes{
+    font-size: 12px;
+}
+
+.branches i{
+    margin-right: 16px;
+}
+
+.allBranshes p{
+    width: 200px;
+    padding-top: 16px;
+    padding-inline: 16px;
+    padding-bottom: 32px;
+    background-color: rgb(208, 208, 208);
+    margin-block: 16px;
+    margin-right: 8px;
+    border-radius: 5px;
+}
+
+/* .allBranshes p:nth-child(1){
+    color: rgb(149, 7, 7);
+} */
+
+.footer{
+    padding: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: rgb(66, 56, 56);
+}
+
+.footer h3{
+    margin-block: 20px;
+}
+
+.social {
+    width: 30%;
+    /* align-items: start; */
+}
+
+.social i{
+    margin-right: 16px;
+}
+
+.contacts p{
+    margin-block: 16px;
+    color: gray;
+}
+
+.contacts p i{
+    color: white;
+    margin-right: 8px;
+}

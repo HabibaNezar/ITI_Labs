@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 1.2</title>
+
+    <style>
+        table{
+            text-align: center;
+            border: 2px solid red;
+            padding: 2px;
+            margin: 2px;
+        }
+        tr,td{
+            padding: 2px;
+            margin: 2px;
+            border: 2px solid red;
+        }
+
+    </style>
+</head>
+<body>
+
+    <table id="result">
+        <tr>
+            <th>Values</th>
+        </tr>
+    </table>
+    <p id="repeat"></p>
+    
+    <script>
+        var arr = [];
+        
+        do{
+            var inputNumber = prompt("enter your numbers with no repeat and '0' for skip ")
+            var n = +inputNumber
+            if(isNaN(n)){
+                alert("only numbers is valid")
+            }
+            else if(n==0){
+                break;
+            } 
+            else{
+                arr.push(n)
+                continue;
+            }
+        }while(true)
+
+        arr.map((val) => {document.getElementById("result").innerHTML += "<tr><td>" + val + "</td></tr>"})
+
+        for(var i=0 ; i<arr.length ; i++){
+            var rpeatedIndex = arr.indexOf(arr[i] , i+1);
+            if(rpeatedIndex != -1){
+                document.getElementById("repeat").innerHTML += "repeated row number " + arr[rpeatedIndex] + " row number " + (rpeatedIndex+1) + "<br>"
+            }
+            else{
+                continue
+            }
+        }
+        
+        console.log(arr)
+
+
+
+    </script>
+</body>
+</html>

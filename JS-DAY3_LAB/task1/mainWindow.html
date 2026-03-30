@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>main window</title>
+    <style>
+        p:hover{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+    <p onclick="openAdvartisingWindow()" style="color:blue; text-decoration-line:underline  ; cursor: pointer; ">Open pop up advartising window</p>
+
+    <script>
+        var myWindow;
+        function openAdvartisingWindow(){
+           myWindow = open("advartisingWindow.html" , "_blank" , "width=400 , height=300 , left=200 , top=200");
+           autoScroll()
+        }
+        function autoScroll(){
+            setInterval(function(){
+                myWindow.scrollBy(0,2)
+            } ,50)
+        } 
+    </script>
+</body>
+</html>

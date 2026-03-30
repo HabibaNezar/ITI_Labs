@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task2</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      body {
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .content {
+        width: 80vw;
+        height: 80vh;
+        border: 2px solid black;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .controllerButtons {
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        margin: 32px;
+      }
+      button {
+        padding-inline: 24px;
+        padding-block: 4px;
+        color: white;
+        background-color: rgb(62, 169, 236);
+        border: 2px solid rgb(62, 169, 236);
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: rgb(9, 155, 246);
+      }
+
+      .myRec {
+        width: 400px;
+        height: 300px;
+        margin-top: 32px;
+        margin-bottom: 24px;
+        /* border: 2px solid rgb(76, 77, 78); */
+        position: relative;
+      }
+
+      @keyframes recAnimation {
+        0% {
+          top: 0;
+          left: 0;
+          background-color: rgb(248, 199, 40);
+        }
+        25% {
+          top: 0;
+          left: 200px;
+          background-color: rgb(111, 198, 87);
+        }
+        50% {
+          top: 200px;
+          left: 200px;
+          background-color: rgb(40, 231, 248);
+        }
+        75% {
+          top: 200px;
+          left: 0;
+          background-color: rgb(226, 243, 120);
+        }
+        100% {
+          top: 0;
+          left: 0;
+          background-color: rgb(248, 199, 40);
+        }
+      }
+
+      .rec {
+        top: 0;
+        left: 0;
+        background-color: rgb(248, 199, 40);
+        width: 200px;
+        height: 100px;
+        position: absolute;
+        animation-play-state: paused;
+        animation-name: recAnimation;
+        animation-duration: 4s;
+        animation-iteration-count: infinite;
+        transition: transform 0.5s;
+      }
+
+      .rec:hover {
+        animation-play-state: paused !important;
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <div class="controllerButtons">
+        <button id="btn-start">Start</button>
+        <button id="btn-stop">Stop</button>
+        <button id="btn-pause">Pause</button>
+      </div>
+      <div class="myRec">
+        <div class="rec"></div>
+      </div>
+    </div>
+
+    <script>
+      var startBtn = document.getElementById("btn-start");
+      var stopBtn = document.getElementById("btn-stop");
+      var pauseBtn = document.getElementById("btn-pause");
+      var myRec = document.querySelector(".rec");
+
+      startBtn.addEventListener("click", function () {
+        myRec.style.animation = "none";
+        myRec.offsetHeight;
+        myRec.style.animation = "recAnimation 4s infinite";
+        myRec.style.animationPlayState = "running";
+      });
+
+      stopBtn.addEventListener("click", function () {
+        myRec.style.animation = "none";
+      });
+
+      pauseBtn.addEventListener("click", function () {
+        myRec.style.animationPlayState = "paused";
+      });
+    </script>
+  </body>
+</html>

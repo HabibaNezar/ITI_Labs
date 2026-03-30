@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 3</title>
+    <style>
+        p{
+            color: red;
+            font-size: xx-large;
+        }
+        p span{
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+    <div>
+        <p>sum of the three values: <span id="sum"></span></p>
+        <p>multiplication of the three values: <span id="multiplication"></span></p>
+        <p>division of the three values: <span id="division"></span></p>
+    </div>
+    
+    
+    
+    <script>
+        var arr = [];
+
+        for(var i=0 ; i<3 ; i++){
+            var n = prompt("enter three number1");
+            var myn = parseInt(n);
+            arr[i] = myn;
+        }
+
+        var sum = arr[0] + arr[1] + arr[2];
+        var multiplication = arr[0] * arr[1] * arr[2];
+        var division = arr[0] / arr[1] / arr[2];
+
+        document.getElementById('sum').innerHTML= arr[0] + "+" + arr[1] + "+" + arr[2] + " = "+ sum;
+        document.getElementById('multiplication').innerHTML= arr[0] + "*" + arr[1] + "*" + arr[2] + " = " + multiplication;
+        document.getElementById('division').innerHTML= arr[0] + "/" + arr[1] + "/" + arr[2] + " = " + division;
+    </script>
+</body>
+</html>

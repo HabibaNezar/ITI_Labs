@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>task2</title>
+
+    <style>
+      input {
+        width: 70vw;
+        margin: 20px;
+        height: 24px;
+        border-radius: 10px;
+        padding-inline: 10px;
+        padding-block: 5px;
+      }
+      img {
+        width: 100%;
+      }
+      button {
+        height: 32px;
+        padding-block: 5px;
+        padding-inline: 20px;
+        background-color: rgb(216, 138, 138);
+        border: 2px solid rgb(216, 138, 138);
+        color: white;
+        border-radius: 10px;
+        cursor: pointer;
+      }
+      button:hover {
+        background-color: rgb(170, 98, 98);
+      }
+      #cards {
+        width: 100vw;
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+      }
+
+      .card {
+        border: 2px solid black;
+        width: 200px;
+        padding: 10px;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.256);
+      }
+      .card .name {
+        font-size: xx-large;
+        color: black;
+        padding: 0px;
+        margin: 0px;
+      }
+      .card .region {
+        font-size: 15px;
+        color: gray;
+        padding: 0px;
+        margin: 4px;
+      }
+      .card .name2 {
+        font-size: xx-large;
+        color: black;
+        padding: 0px;
+        margin: 0px;
+      }
+      .card .region2 {
+        font-size: 15px;
+        color: gray;
+        padding: 0px;
+        margin: 4px;
+      }
+      .card p {
+        color: gray;
+        font-size: 15px;
+      }
+      .card p img {
+        width: 20px;
+        padding-right: 10px;
+      }
+      #card2 {
+        transform: scale(0.9);
+      }
+      .title {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div id="search">
+        <input
+          type="text"
+          placeholder="enter country name you want to know about"
+          id="myInput"
+        />
+        <button id="myButton">search</button>
+      </div>
+      <div id="cards">
+        <div id="card1"></div>
+        <div id="card2"></div>
+      </div>
+    </div>
+
+    <script>
+      let myCards = document.getElementById("cards");
+      let myCard1 = document.getElementById("card1");
+      let myCard2 = document.getElementById("card2");
+      let myInput = document.getElementById("myInput");
+      let myButton = document.getElementById("myButton");
+
+      myButton.addEventListener("click", function () {
+        myCard1.innerHTML = ``;
+        displayCountryDetails(myInput.value);
+      });
+
+      async function displayCountryDetails(name) {
+        let countryDetails = await fetch(
+          `https://restcountries.com/v2/name/${name}`,
+        );
+        let jsonCountryDetails = await countryDetails.json();
+
+        // display the country
+        let formattedPopulationNumber =
+          (jsonCountryDetails[0].population / 1_000_000).toFixed(1) + " M";
+
+        myCard1.innerHTML = ` 
+          <img class="myImg" id="myImg" src="" alt="" />
+          <p class="name"></p>
+          <p class="region"></p>
+          <p class="population"></p>
+          <p class="languages"></p>
+          <p class="currencies"></p>`;
+
+        let myImg = document.querySelector(".myImg");
+        let countryName = document.querySelector(".name");
+        let region = document.querySelector(".region");
+        let population = document.querySelector(".population");
+        let languages = document.querySelector(".languages");
+        let currencies = document.querySelector(".currencies");
+
+        myImg.src = jsonCountryDetails[0].flag;
+        countryName.innerHTML = jsonCountryDetails[0].name;
+        region.innerHTML = jsonCountryDetails[0].region;
+        population.innerHTML = `<img src="./img1.png" alt="" /> ${formattedPopulationNumber}`;
+        languages.innerHTML = `<img src="./img2.png" alt="" /> ${jsonCountryDetails[0].languages[0].name}`;
+        currencies.innerHTML = `<img src="./img3.png" alt="" /> ${jsonCountryDetails[0].currencies[0].name}`;
+
+        myCard1.classList = "card";
+
+        displayNeighbor(jsonCountryDetails[0].borders[0]);
+
+        console.log("country details = ", jsonCountryDetails);
+      }
+
+      async function displayNeighbor(neighbor) {
+        let neighborCountry = await fetch(
+          `https://restcountries.com/v2/alpha/${neighbor}`,
+        );
+        let jsonNeighborCountry = await neighborCountry.json();
+
+        // display the country
+        let formattedPopulationNumber =
+          (jsonNeighborCountry.population / 1_000_000).toFixed(1) + " M";
+
+        myCard2.innerHTML = ` 
+          <p class="title">NEIGHBOUR COUNTRY</p>
+          <img class="myImg2" id="myImg" src="" alt="" />
+          <p class="name2"></p>
+          <p class="region2"></p>
+          <p class="population2"></p>
+          <p class="languages2"></p>
+          <p class="currencies2"></p>`;
+
+        let myImg = document.querySelector(".myImg2");
+        let countryName = document.querySelector(".name2");
+        let region = document.querySelector(".region2");
+        let population = document.querySelector(".population2");
+        let languages = document.querySelector(".languages2");
+        let currencies = document.querySelector(".currencies2");
+
+        myImg.src = jsonNeighborCountry.flag;
+        countryName.innerHTML = jsonNeighborCountry.name;
+        region.innerHTML = jsonNeighborCountry.region;
+        population.innerHTML = `<img src="./img1.png" alt="" /> ${formattedPopulationNumber}`;
+        languages.innerHTML = `<img src="./img2.png" alt="" /> ${jsonNeighborCountry.languages[0].name}`;
+        currencies.innerHTML = `<img src="./img3.png" alt="" /> ${jsonNeighborCountry.currencies[0].name}`;
+        myCard2.classList = "card";
+
+        console.log("neighborCountry", jsonNeighborCountry);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4</title>
+    <style>
+        button{
+            background-color: yellow;
+            padding-inline: 20px;
+            padding-block: 5px;
+            cursor: pointer;
+            border: 2px rgb(214, 214, 4) solid;
+        }
+        button:hover{
+            background-color: rgb(222, 222, 11);
+        }
+    </style>
+</head>
+<body>
+
+    <P>TYPING MESSAGE</P>
+    <button onclick="openPopUpWindow()">show message</button>
+    
+    <script>
+        function openPopUpWindow(){
+            open("popUpWindow.html", "popUpWindow", "height=300,width=500,top=100,left=100")
+        }
+    </script>
+</body>
+</html>

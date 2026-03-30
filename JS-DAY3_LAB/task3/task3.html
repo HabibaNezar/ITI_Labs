@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task3</title>
+    <link rel="stylesheet" href="./task3.css">
+</head>
+<body>
+
+    <div id="main-section">
+        <h1>Slide Show <span>Game</span></h1>
+        <div id="slide">
+            <img id="image" src="" alt="">
+            <div class="buttons">
+                    <button id="previous" onclick="previousImg()"><</button>
+                    <button id="play" onclick="playImg()">play</button>
+                    <button id="stop" onclick="stopImg()">stop</button>
+                    <button id="next" onclick="nextImg()">></button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var imgArr = []
+        for(var i=0 ; i<10 ; i++){
+            var img = new Image()
+            img.src = i + ".jpg"
+            imgArr.push(img)
+        }
+
+        var interval;
+        var isPlayed = true;
+        var n = 9;
+        var myImage = document.getElementById("image")
+        myImage.src = imgArr[n].src; 
+        
+        function nextImg(){
+            n++;
+            if( n>=0 && n<10 ){
+                myImage.src = imgArr[n].src; 
+            }
+            else{
+                n=0;
+                myImage.src = imgArr[n].src; 
+            }
+            console.log("n= " + n)
+        }
+
+        function previousImg(){
+            n--;
+            if( n>=0 && n<10 ){
+                myImage.src = imgArr[n].src;
+            }
+            else{
+                n=9;
+                myImage.src = imgArr[n].src;
+            }
+            console.log("n= " + n)
+        }
+        function playImg(){
+            if(isPlayed){
+                interval= setInterval(()=>{
+                nextImg()
+                } , 500)
+                isPlayed = false;
+            }
+            else{
+                alert("you have to click play just one time")
+            }
+        }
+        function stopImg(){
+            if(interval){
+                clearInterval(interval);
+                interval = null;
+            }            
+        }
+        
+    </script>
+    
+</body>
+</html>

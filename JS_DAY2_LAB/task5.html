@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 5</title>
+
+    <style>
+        table{
+            border: 2px solid yellow;
+            /* margin: 2px; */
+            /* padding: 2px; */
+        }
+
+        td,tr,th{
+            border: 2px solid yellow;
+        }
+    </style>
+
+</head>
+<body>
+    <table id="myTable">
+        <tr>
+            <th>ST1</th>
+            <th>ST2</th>
+            <th>ST3</th>
+            <th>sum</th>
+        </tr>
+        <tr id="course1">
+
+        </tr>
+        
+    </table>
+
+    <script>
+
+        var arr = [[1,2,3] , [4,5,6]];
+        var sumArr = []
+        for(var i=1 ; i<3 ; i++){
+            var sum = 0;
+            for(var j=0 ; j<3 ; j++){
+                document.getElementById("course" + i).innerHTML += "<td>" + arr[i-1][j] + "</td>"
+                sum += arr[i-1][j]
+            }
+            sumArr.push(sum);
+            document.getElementById("course" + i).innerHTML += "<td>" + sum + "</td>"
+            document.getElementById("myTable").innerHTML += "<tr id='course2'></tr>"
+        }
+        
+    </script>
+</body>
+</html>

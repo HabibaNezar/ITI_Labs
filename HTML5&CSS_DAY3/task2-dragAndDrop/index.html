@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>drag and drop</title>
+    <link rel="stylesheet" href="./index.css" />
+    <script>
+      let allimgs;
+      let dropArea;
+      let dragArea;
+      let myP;
+
+      window.addEventListener("load", function () {
+        allimgs = document.images;
+        dropArea = document.getElementById("dropWrapper");
+        dragArea = document.getElementById("dragWrapper");
+        myP = document.getElementById("myP");
+
+        checkIfEmpty();
+
+        for (let i = 0; i < allimgs.length; i++) {
+          allimgs[i].addEventListener("dragstart", startdrag);
+          allimgs[i].addEventListener("dragend", enddrag);
+        }
+
+        dropArea.addEventListener("drop", dropped);
+        dropArea.addEventListener("dragenter", enterdrag);
+        dropArea.addEventListener("dragover", overdrag);
+
+        dragArea.addEventListener("drop", dropped);
+        dragArea.addEventListener("dragenter", enterdrag);
+        dragArea.addEventListener("dragover", overdrag);
+      });
+
+      function startdrag(e) {
+        /*e.preventDefault();*/
+        /*console.log(e);*/
+        /*console.log(e.target.outerHTML);*/
+        e.dataTransfer.setData("myimg", e.target.outerHTML);
+        e.target.classList.add("dragging");
+      }
+
+      function dropped(e) {
+        e.preventDefault();
+        dropArea.innerHTML += e.dataTransfer.getData("myimg");
+        checkIfEmpty();
+        let draggedImage = document.querySelector(".dragging");
+        draggedImage.remove();
+      }
+
+      function enddrag(e) {
+        e.preventDefault();
+        checkIfEmpty();
+      }
+
+      function overdrag(e) {
+        e.preventDefault();
+      }
+      function leavedrag(e) {
+        e.preventDefault();
+      }
+      function enterdrag(e) {
+        e.preventDefault();
+        e.target.style.backgroundColor = "var(--main-color)";
+      }
+
+      function checkIfEmpty() {
+        if (dragArea.querySelectorAll("img").length === 0) {
+          myP.classList.add("show");
+        } else {
+          myP.classList.remove("show");
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="cotainer">
+      <div class="dragWrapper" id="dragWrapper">
+        <img src="./11.jpg" alt="" />
+        <img src="./22.jpg" alt="" />
+        <img src="./33.jpg" alt="" />
+        <img src="./44.jpg" alt="" />
+        <img src="./55.jpg" alt="" />
+        <img src="./66.jpg" alt="" />
+        <p id="myP">empty!</p>
+      </div>
+      <h4>Your Card:</h4>
+      <div class="dropWrapper" id="dropWrapper"></div>
+    </div>
+  </body>
+</html>
