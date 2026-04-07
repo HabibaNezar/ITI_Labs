@@ -1,0 +1,40 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\Course.cs" />
+    <Compile Remove="Models\Department.cs" />
+    <Compile Remove="Models\Instructor.cs" />
+    <Compile Remove="Models\Ins_Course.cs" />
+    <Compile Remove="Models\Student.cs" />
+    <Compile Remove="Models\Stud_Course.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Models\Course.cs" />
+    <None Include="Models\Department.cs" />
+    <None Include="Models\Instructor.cs" />
+    <None Include="Models\Ins_Course.cs" />
+    <None Include="Models\Student.cs" />
+    <None Include="Models\Stud_Course.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="9.0.14" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="9.0.14">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+</Project>

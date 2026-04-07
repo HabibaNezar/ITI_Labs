@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Student>
+
+@{
+    ViewData["Title"] = "Students List";
+}
+
+<div class="text-center mt-4">
+    <h2 class="display-6 text-primary">Student Management System</h2>
+    <hr />
+</div>
+
+<div class="container mt-4">
+    <table class="table table-hover shadow-sm text-center">
+        <thead class="table-dark">
+            <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Image</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td class="align-middle">@item.Name</td>
+                    <td class="align-middle">@item.Email</td>
+                    <td class="align-middle">@item.Phone</td>
+                    <td>
+                        <img src="/images/@item.Image" width="55" height="55" style="border-radius:50%; object-fit:cover;" />
+                    </td>
+                    <td class="align-middle">
+                        <a href="/Student/GetByID/@item.Id" class="btn btn-outline-info btn-sm">View Details</a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
