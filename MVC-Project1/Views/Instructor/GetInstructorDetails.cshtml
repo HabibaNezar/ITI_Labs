@@ -1,0 +1,304 @@
+﻿@model Instructor
+@{
+    ViewData["Title"] = "GetInstructorDetails";
+}
+
+<style>
+    .details-page {
+        max-width: 580px;
+        margin: 0 auto;
+        padding: 0 16px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .detail-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 6px 32px rgba(45,36,56,.12);
+        overflow: hidden;
+        border: 1px solid rgba(45,36,56,.06);
+        width: 100%;
+    }
+
+    /* Header with photo */
+    .detail-card-header {
+        background: #2D2438;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .student-photo {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid #F5A623;
+        box-shadow: 0 0 0 4px rgba(245,166,35,.2);
+    }
+
+    .detail-card-header h4 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.6rem;
+        letter-spacing: .08em;
+        color: #fff;
+        margin: 0;
+        line-height: 1;
+    }
+
+    .dept-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        background: rgba(245,166,35,.15);
+        color: #F5A623;
+        font-size: .72rem;
+        font-weight: 700;
+        letter-spacing: .08em;
+        text-transform: uppercase;
+        padding: 4px 12px;
+        border-radius: 20px;
+        border: 1px solid rgba(245,166,35,.25);
+    }
+
+    /* Detail rows */
+    .detail-card-body {
+        padding: 20px 24px 8px;
+    }
+
+    .detail-row {
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        padding: 12px 0;
+        border-bottom: 1px solid #F0EBE0;
+    }
+
+        .detail-row:last-child {
+            border-bottom: none;
+        }
+
+    .detail-row-icon {
+        width: 32px;
+        height: 32px;
+        background: rgba(245,166,35,.12);
+        border-radius: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #F5A623;
+        font-size: .82rem;
+        flex-shrink: 0;
+        margin-top: 1px;
+    }
+
+    .detail-row-content label {
+        font-size: .68rem;
+        font-weight: 700;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+        color: #7A7090;
+        display: block;
+        margin-bottom: 2px;
+    }
+
+    .detail-row-content span {
+        font-size: .9rem;
+        color: #1A1525;
+        font-weight: 500;
+    }
+
+    /* Courses section */
+    .courses-section {
+        padding: 0 24px 20px;
+    }
+
+    .courses-label {
+        font-size: .7rem;
+        font-weight: 700;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        color: #F5A623;
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+
+        .courses-label::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: #F0EBE0;
+        }
+
+    .courses-table {
+        width: 100%;
+        border-collapse: collapse;
+        border-radius: 10px;
+        overflow: hidden;
+        border: 1px solid #F0EBE0;
+    }
+
+        .courses-table thead tr {
+            background: #2D2438;
+        }
+
+        .courses-table thead td {
+            padding: 9px 14px;
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .1em;
+            text-transform: uppercase;
+            color: #E8D9B5;
+        }
+
+        .courses-table tbody tr {
+            border-bottom: 1px solid #F0EBE0;
+            transition: background .15s;
+        }
+
+            .courses-table tbody tr:last-child {
+                border-bottom: none;
+            }
+
+            .courses-table tbody tr:hover {
+                background: #FAF7F2;
+            }
+
+        .courses-table tbody td {
+            padding: 10px 14px;
+            font-size: .85rem;
+            color: #1A1525;
+        }
+
+    .grade-pass {
+        color: #2d8a4e;
+        font-weight: 700;
+    }
+
+    .grade-fail {
+        color: #dc3545;
+        font-weight: 700;
+    }
+
+    /* Footer */
+    .detail-footer {
+        padding: 16px 24px;
+        border-top: 1px solid #F0EBE0;
+        display: flex;
+        justify-content: space-between;
+        gap: 10px;
+    }
+
+    .btn-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: transparent;
+        color: #574E6E;
+        font-size: .83rem;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: 1.5px solid #E8D9B5;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: border-color .2s, color .2s, background .2s;
+    }
+
+        .btn-back:hover {
+            border-color: #2D2438;
+            color: #2D2438;
+            background: #F0EBE0;
+        }
+
+    .btn-edit {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #F5A623;
+        color: #2D2438;
+        font-weight: 700;
+        font-size: .83rem;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background .2s, transform .15s, box-shadow .2s;
+        box-shadow: 0 4px 14px rgba(245,166,35,.3);
+    }
+
+        .btn-edit:hover {
+            background: #D4891A;
+            color: #2D2438;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(245,166,35,.4);
+        }
+</style>
+
+<div class="details-page">
+    <div class="detail-card">
+
+        <!-- Header -->
+        <div class="detail-card-header">
+            <h4>@Model.InsName</h4>
+            
+        </div>
+
+        <!-- Info rows -->
+        <div class="detail-card-body">
+
+            <div class="detail-row">
+                <div class="detail-row-icon"><i class="fa-solid fa-id-card"></i></div>
+                <div class="detail-row-content">
+                    <label>SSN</label>
+                    <span>@Model.InsId</span>
+                </div>
+            </div>
+
+            <div class="detail-row">
+                <div class="detail-row-icon"><i class="fa-solid fa-envelope"></i></div>
+                <div class="detail-row-content">
+                    <label>Email</label>
+                    <span>@Model.Email</span>
+                </div>
+            </div>
+
+            <div class="detail-row">
+                <div class="detail-row-icon"><i class="fa-solid fa-phone"></i></div>
+                <div class="detail-row-content">
+                    <label>Phone</label>
+                    <span>@Model.Age</span>
+                </div>
+            </div>
+
+            <div class="detail-row">
+                <div class="detail-row-icon"><i class="fa-solid fa-location-dot"></i></div>
+                <div class="detail-row-content">
+                    <label>Address</label>
+                    <span>@Model.Address</span>
+                </div>
+            </div>
+
+        </div>
+
+       
+        <!-- Footer -->
+        <div class="detail-footer">
+            <a href="/Instructor/GetAllInstructors" class="btn-back">
+                <i class="fa-solid fa-arrow-left"></i>
+                Back to Instructors
+            </a>
+            <a href="/Instructor/EditInstructorForm/@Model.InsId" class="btn-edit">
+                <i class="fa-solid fa-pen"></i>
+                Edit Instructor
+            </a>
+        </div>
+
+    </div>
+</div>
+

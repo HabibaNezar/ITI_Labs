@@ -1,0 +1,286 @@
+﻿@model MVC_Project1.ViewModels.RegisterUserViewModel
+@{
+    ViewData["Title"] = "Register";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register — EduTrack</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --orange: #F5A623;
+            --orange-dark: #D4891A;
+            --purple: #2D2438;
+            --purple-mid: #3D3250;
+            --purple-light: #574E6E;
+            --beige: #E8D9B5;
+            --white: #FFFFFF;
+            --bg: #F0EBE0;
+            --text-main: #1A1525;
+            --text-muted: #7A7090;
+        }
+
+        html, body {
+            min-height: 100vh;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+        }
+
+      
+        /* ── PAGE ── */
+        .page-body {
+            min-height: calc(100vh - 64px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 48px 20px;
+        }
+
+        /* ── CARD ── */
+        .register-card {
+            background: var(--white);
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(45,36,56,.13);
+            padding: 48px 44px;
+            width: 100%;
+            max-width: 460px;
+        }
+
+        .card-header {
+            margin-bottom: 32px;
+        }
+
+            .card-header h1 {
+                font-family: 'Bebas Neue', sans-serif;
+                font-size: 2rem;
+                letter-spacing: .05em;
+                color: var(--purple);
+                line-height: 1;
+                margin-bottom: 6px;
+            }
+
+            .card-header p {
+                font-size: .85rem;
+                color: var(--text-muted);
+            }
+
+        /* ── FIELDS ── */
+        .r-field {
+            margin-bottom: 18px;
+        }
+
+            .r-field label {
+                display: block;
+                font-size: .76rem;
+                font-weight: 600;
+                letter-spacing: .05em;
+                text-transform: uppercase;
+                color: var(--purple-light);
+                margin-bottom: 7px;
+            }
+
+        .field-wrap {
+            position: relative;
+        }
+
+            .field-wrap i {
+                position: absolute;
+                left: 13px;
+                top: 50%;
+                transform: translateY(-50%);
+                color: var(--text-muted);
+                font-size: .82rem;
+                pointer-events: none;
+            }
+
+            .field-wrap input {
+                width: 100%;
+                padding: 11px 14px 11px 38px;
+                background: var(--bg);
+                border: 1.5px solid transparent;
+                border-radius: 10px;
+                font-family: 'DM Sans', sans-serif;
+                font-size: .88rem;
+                color: var(--text-main);
+                outline: none;
+                transition: .2s;
+            }
+
+                .field-wrap input:focus {
+                    border-color: var(--orange);
+                    background: var(--white);
+                    box-shadow: 0 0 0 3px rgba(245,166,35,.12);
+                }
+
+                .field-wrap input::placeholder {
+                    color: var(--text-muted);
+                    opacity: .7;
+                }
+
+        .text-danger {
+            font-size: .76rem;
+            color: #c0392b;
+            display: block;
+            margin-top: 5px;
+        }
+
+        .val-summary {
+            background: #fdf0f0;
+            border: 1px solid #f5c6c6;
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: .8rem;
+            color: #c0392b;
+            margin-bottom: 22px;
+        }
+
+            .val-summary:empty {
+                display: none;
+            }
+
+        /* ── SUBMIT ── */
+        .btn-submit {
+            width: 100%;
+            padding: 13px;
+            border: none;
+            border-radius: 10px;
+            background: var(--purple);
+            color: var(--white);
+            font-family: 'DM Sans', sans-serif;
+            font-size: .9rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: .2s;
+            margin-top: 6px;
+            letter-spacing: .03em;
+        }
+
+            .btn-submit:hover {
+                background: var(--orange);
+                color: var(--purple);
+            }
+
+        /* ── FOOTER LINK ── */
+        .card-footer-link {
+            text-align: center;
+            margin-top: 22px;
+            font-size: .83rem;
+            color: var(--text-muted);
+        }
+
+            .card-footer-link a {
+                color: var(--orange-dark);
+                font-weight: 600;
+                text-decoration: none;
+            }
+
+                .card-footer-link a:hover {
+                    text-decoration: underline;
+                }
+
+        @@media (max-width: 768px) {
+            .main-navbar {
+                padding: 0 20px;
+            }
+
+            .nav-link {
+                display: none;
+            }
+
+            .register-card {
+                padding: 36px 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <partial name="_NavHomePV"></partial>
+
+    <!-- FORM -->
+    <div class="page-body">
+        <div class="register-card">
+
+            <div class="card-header">
+                <h1>Create Account</h1>
+                <p>Fill in your details below to get started.</p>
+            </div>
+
+            <form asp-action="Register" method="post">
+                @* <div asp-validation-summary="All" class="val-summary"></div> *@
+
+                <div class="r-field">
+                    <label asp-for="UserName"></label>
+                    <div class="field-wrap">
+                        <i class="fa-solid fa-user"></i>
+                        <input asp-for="UserName" placeholder="e.g. ahmed_kamal" />
+                    </div>
+                    <span asp-validation-for="UserName" class="text-danger"></span>
+                </div>
+
+                <div class="r-field">
+                    <label asp-for="Email"></label>
+                    <div class="field-wrap">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input asp-for="Email" placeholder="you@example.com" />
+                    </div>
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="r-field">
+                    <label asp-for="Password"></label>
+                    <div class="field-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input asp-for="Password" placeholder="••••••••" />
+                    </div>
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="r-field">
+                    <label asp-for="ConfirmPassword"></label>
+                    <div class="field-wrap">
+                        <i class="fa-solid fa-lock"></i>
+                        <input asp-for="ConfirmPassword" placeholder="••••••••" />
+                    </div>
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+
+                <div class="r-field">
+                    <label asp-for="Address"></label>
+                    <div class="field-wrap">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <input asp-for="Address" placeholder="123 Main St, Cairo" />
+                    </div>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <button type="submit" class="btn-submit">Create Account &rarr;</button>
+            </form>
+
+            <div class="card-footer-link">
+                Already have an account? <a asp-action="LoginForm">Sign in</a>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+
+</body>
+</html>

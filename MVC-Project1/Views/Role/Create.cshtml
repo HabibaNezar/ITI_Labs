@@ -1,0 +1,300 @@
+﻿@model MVC_Project1.ViewModels.RoleViewModel
+@{
+    ViewData["Title"] = "Create Role";
+    Layout = "_MyLayout";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+    :root {
+        --ink: #12101A;
+        --ink-soft: #3A3550;
+        --muted: #8B82A7;
+        --gold: #C9972B;
+        --gold-light: #F5C96A;
+        --cream: #F7F3EC;
+        --white: #FFFFFF;
+        --border: #E4DDD0;
+        --danger: #B94040;
+        --danger-bg: #FDF2F2;
+    }
+
+    .cr-page {
+        min-height: calc(100vh - 64px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 60px 20px;
+        background: var(--cream);
+        font-family: 'Outfit', sans-serif;
+    }
+
+    .cr-card {
+        background: var(--white);
+        border-radius: 20px;
+        box-shadow: 0 4px 6px rgba(18,16,26,.04), 0 16px 40px rgba(18,16,26,.08);
+        padding: 48px 44px 40px;
+        width: 100%;
+        max-width: 440px;
+        position: relative;
+    }
+
+        /* gold top accent line */
+        .cr-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 44px;
+            right: 44px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--gold), var(--gold-light), transparent);
+            border-radius: 0 0 4px 4px;
+        }
+
+    /* ── HEADER ── */
+    .cr-icon {
+        width: 48px;
+        height: 48px;
+        border-radius: 14px;
+        background: linear-gradient(135deg, var(--ink) 0%, var(--ink-soft) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+        .cr-icon i {
+            color: var(--gold-light);
+            font-size: 1.1rem;
+        }
+
+    .cr-title {
+        font-family: 'Playfair Display', serif;
+        font-size: 1.75rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 6px;
+        line-height: 1.15;
+    }
+
+    .cr-subtitle {
+        font-size: .84rem;
+        color: var(--muted);
+        margin-bottom: 32px;
+    }
+
+    /* ── VALIDATION ── */
+    .val-summary {
+        background: var(--danger-bg);
+        border-left: 3px solid var(--danger);
+        border-radius: 8px;
+        padding: 10px 14px;
+        font-size: .8rem;
+        color: var(--danger);
+        margin-bottom: 22px;
+        display: none;
+    }
+
+        .val-summary:not(:empty) {
+            display: block;
+        }
+
+    /* ── FIELD ── */
+    .cr-field {
+        margin-bottom: 24px;
+    }
+
+        .cr-field label {
+            display: block;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .08em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            margin-bottom: 8px;
+        }
+
+    .field-wrap {
+        position: relative;
+    }
+
+        .field-wrap i {
+            position: absolute;
+            left: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: .8rem;
+            pointer-events: none;
+            transition: color .2s;
+        }
+
+        .field-wrap input {
+            width: 100%;
+            padding: 12px 14px 12px 40px;
+            background: var(--cream);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: .9rem;
+            color: var(--ink);
+            outline: none;
+            transition: border-color .2s, box-shadow .2s, background .2s;
+        }
+
+            .field-wrap input:focus {
+                border-color: var(--gold);
+                background: var(--white);
+                box-shadow: 0 0 0 3px rgba(201,151,43,.13);
+            }
+
+                .field-wrap input:focus + i,
+                .field-wrap input:focus ~ i {
+                    color: var(--gold);
+                }
+
+            /* trick: icon is after input in DOM but positioned absolutely */
+            .field-wrap input::placeholder {
+                color: #BDB5CC;
+            }
+
+    .text-danger {
+        font-size: .76rem;
+        color: var(--danger);
+        margin-top: 6px;
+        display: block;
+    }
+
+    /* hint text */
+    .cr-hint {
+        font-size: .78rem;
+        color: var(--muted);
+        margin-top: 6px;
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+        .cr-hint i {
+            font-size: .7rem;
+        }
+
+    /* ── ACTIONS ── */
+    .cr-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+    .btn-submit {
+        width: 100%;
+        padding: 13px;
+        border: none;
+        border-radius: 10px;
+        background: var(--ink);
+        color: var(--white);
+        font-family: 'Outfit', sans-serif;
+        font-size: .9rem;
+        font-weight: 700;
+        cursor: pointer;
+        letter-spacing: .03em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 9px;
+        transition: background .2s, transform .1s;
+    }
+
+        .btn-submit:hover {
+            background: var(--gold);
+            color: var(--ink);
+        }
+
+        .btn-submit:active {
+            transform: scale(.98);
+        }
+
+    .btn-back {
+        width: 100%;
+        padding: 11px;
+        border: 1.5px solid var(--border);
+        border-radius: 10px;
+        background: transparent;
+        color: var(--muted);
+        font-family: 'Outfit', sans-serif;
+        font-size: .85rem;
+        font-weight: 500;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        text-decoration: none;
+        transition: border-color .2s, color .2s;
+    }
+
+        .btn-back:hover {
+            border-color: var(--ink-soft);
+            color: var(--ink);
+        }
+
+    @@media (max-width: 480px) {
+        .cr-card {
+            padding: 36px 24px 30px;
+        }
+
+            .cr-card::before {
+                left: 24px;
+                right: 24px;
+            }
+    }
+</style>
+
+<div class="cr-page">
+    <div class="cr-card">
+
+        <div class="cr-icon">
+            <i class="fa-solid fa-shield-halved"></i>
+        </div>
+
+        <h1 class="cr-title">New Role</h1>
+        <p class="cr-subtitle">Define a new access role for the system.</p>
+
+        <form asp-action="GetAllStudents" asp-controller="student">
+
+            @* <div asp-validation-summary="All" class="val-summary"></div> *@
+
+            <div class="cr-field">
+                <label asp-for="Role">Role Name</label>
+                <div class="field-wrap">
+                    <input asp-for="Role" placeholder="e.g. Teacher, Manager…" autocomplete="off" />
+                    <i class="fa-solid fa-id-badge"></i>
+                </div>
+                <span asp-validation-for="Role" class="text-danger"></span>
+                <span class="cr-hint">
+                    <i class="fa-solid fa-circle-info"></i>
+                    Use a clear, singular noun. No spaces.
+                </span>
+            </div>
+
+            <div class="cr-actions">
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-circle-plus"></i> Create Role
+                </button>
+                @* <a asp-action="Index" class="btn-back">
+                    <i class="fa-solid fa-arrow-left"></i> Back to Roles
+                </a> *@
+            </div>
+
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

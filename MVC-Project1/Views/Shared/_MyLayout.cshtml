@@ -1,0 +1,393 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - MVC_Project1</title>
+
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/MVC_Project1.styles.css" asp-append-version="true" />
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <style>
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --orange: #F5A623;
+            --orange-dark: #D4891A;
+            --purple: #2D2438;
+            --purple-mid: #3D3250;
+            --purple-light: #574E6E;
+            --beige: #E8D9B5;
+            --white: #FFFFFF;
+            --bg: #F0EBE0;
+            --text-main: #1A1525;
+            --text-muted: #7A7090;
+            --sidebar-w: 260px;
+            --header-h: 68px;
+            --footer-h: 52px;
+            --radius: 12px;
+            --shadow-sm: 0 2px 8px rgba(45,36,56,.08);
+            --shadow-md: 0 6px 24px rgba(45,36,56,.14);
+            --transition: .25s cubic-bezier(.4,0,.2,1);
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'DM Sans', sans-serif;
+            background: var(--bg);
+            color: var(--text-main);
+            overflow-x: hidden;
+        }
+
+        /* SHELL */
+        .shell {
+            display: grid;
+            grid-template-columns: var(--sidebar-w) 1fr;
+            grid-template-rows: var(--header-h) 1fr var(--footer-h);
+            grid-template-areas: "sidebar header" "sidebar main" "sidebar footer";
+            min-height: 100vh;
+        }
+
+        /* SIDEBAR */
+        .sidebar {
+            grid-area: sidebar;
+            background: var(--purple);
+            display: flex;
+            flex-direction: column;
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow: hidden;
+            z-index: 100;
+        }
+
+        .sidebar-brand {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+            padding: 28px 24px 24px;
+            border-bottom: 1px solid rgba(255,255,255,.07);
+        }
+
+        .brand-avatar {
+            width: 46px;
+            height: 46px;
+            background: var(--orange);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.35rem;
+            color: var(--purple);
+            flex-shrink: 0;
+            box-shadow: 0 0 0 3px rgba(245,166,35,.25);
+        }
+
+        .brand-info h2 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.1rem;
+            letter-spacing: .12em;
+            color: var(--white);
+            line-height: 1;
+        }
+
+        .brand-info span {
+            font-size: .72rem;
+            color: var(--beige);
+            opacity: .6;
+            letter-spacing: .06em;
+            text-transform: uppercase;
+        }
+
+        .sidebar-nav {
+            flex: 1;
+            padding: 28px 0 20px;
+            overflow-y: auto;
+        }
+
+        .nav-label {
+            font-size: .68rem;
+            font-weight: 700;
+            letter-spacing: .14em;
+            text-transform: uppercase;
+            color: var(--orange);
+            padding: 0 24px 10px;
+            margin-top: 8px;
+        }
+
+        .nav-item {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+            padding: 12px 24px;
+            color: rgba(232,217,181,.65);
+            text-decoration: none;
+            font-size: .88rem;
+            font-weight: 500;
+            border-left: 3px solid transparent;
+            transition: var(--transition);
+        }
+
+            .nav-item .nav-icon {
+                width: 34px;
+                height: 34px;
+                background: rgba(255,255,255,.05);
+                border-radius: 8px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: .85rem;
+                color: rgba(232,217,181,.5);
+                transition: var(--transition);
+                flex-shrink: 0;
+            }
+
+            .nav-item:hover, .nav-item.active {
+                color: var(--white);
+                background: rgba(245,166,35,.08);
+                border-left-color: var(--orange);
+            }
+
+                .nav-item:hover .nav-icon, .nav-item.active .nav-icon {
+                    background: var(--orange);
+                    color: var(--purple);
+                }
+
+            .nav-item.active {
+                background: linear-gradient(90deg, rgba(245,166,35,.15) 0%, transparent 100%);
+            }
+
+        .nav-badge {
+            margin-left: auto;
+            background: var(--orange);
+            color: var(--purple);
+            font-size: .65rem;
+            font-weight: 700;
+            padding: 2px 7px;
+            border-radius: 20px;
+        }
+
+        .sidebar-bottom {
+            padding: 18px 24px;
+            border-top: 1px solid rgba(255,255,255,.07);
+        }
+
+        .sidebar-user {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+            padding: 10px 12px;
+            background: rgba(255,255,255,.05);
+            border-radius: 10px;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+            .sidebar-user:hover {
+                background: rgba(255,255,255,.1);
+            }
+
+        .user-thumb {
+            width: 34px;
+            height: 34px;
+            background: var(--purple-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--beige);
+            font-size: .8rem;
+        }
+
+        .user-details {
+            flex: 1;
+            min-width: 0;
+        }
+
+            .user-details strong {
+                display: block;
+                font-size: .8rem;
+                color: var(--white);
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+
+            .user-details small {
+                font-size: .68rem;
+                color: rgba(232,217,181,.45);
+            }
+
+        /* MAIN */
+        .main-content {
+            grid-area: main;
+            padding: 32px;
+            overflow-y: auto;
+        }
+
+        /* FOOTER */
+        .footer {
+            grid-area: footer;
+            background: var(--white);
+            border-top: 1px solid rgba(45,36,56,.07);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 32px;
+            font-size: .76rem;
+            color: var(--text-muted);
+        }
+
+        .footer-brand {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+            font-weight: 600;
+            color: var(--purple);
+        }
+
+            .footer-brand span {
+                color: var(--orange);
+            }
+
+        /* SCROLLBAR */
+        ::-webkit-scrollbar {
+            width: 5px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: transparent;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: var(--beige);
+            border-radius: 4px;
+        }
+
+        /* RESPONSIVE */
+       
+        /* التنسيق الأساسي (للاب توب) */
+        .sidebar {
+            grid-area: sidebar;
+            background: var(--purple);
+            display: flex;
+            flex-direction: column;
+            position: sticky; /* خليه sticky عشان يفضل ظاهر وأنت بتعمل scroll */
+            top: 0;
+            height: 100vh;
+            left: 0; /* تأكد إنها 0 هنا */
+        }
+
+        /* التنسيق للموبايل فقط */
+        @@media (max-width: 900px) {
+            .sidebar
+
+        {
+            position: fixed;
+            left: -260px; /* بيختفي بس في الموبايل */
+            z-index: 1000;
+        }
+
+        .sidebar.open {
+            left: 0; /* يظهر لما تدوس على الزرار */
+        }
+
+        }
+            .sidebar.open {
+                left: 0;
+            }
+
+        .mobile-toggle {
+            display: flex;
+        }
+
+        .header-search {
+            display: none;
+        }
+
+        .profile-info {
+            display: none;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <div class="shell">
+
+        <partial name="_SidebarPV" />
+
+        <partial name="_NavbarPV" />
+
+        <main class="main-content">
+            @RenderBody()
+        </main>
+
+        <footer class="footer">
+            <div class="footer-brand">
+                <i class="fa-solid fa-bolt"></i>
+                MY<span>APP</span> &copy; @DateTime.Now.Year
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const toggle = document.getElementById('sidebarToggle');
+            const sidebar = document.getElementById('sidebar'); // تأكد إن الـ Sidebar في الـ Partial View واخد id="sidebar"
+
+            // Sidebar Toggle Logic
+            if (toggle && sidebar) {
+                toggle.addEventListener('click', () => sidebar.classList.toggle('open'));
+
+                document.addEventListener('click', e => {
+                    if (window.innerWidth <= 900 && !sidebar.contains(e.target) && !toggle.contains(e.target)) {
+                        sidebar.classList.remove('open');
+                    }
+                });
+            }
+
+                    // Active Link Logic
+        const currentPath = window.location.pathname.toLowerCase();
+        const navItems = document.querySelectorAll('.nav-item');
+
+        navItems.forEach(item => {
+            item.classList.remove('active');
+        });
+
+        if (currentPath === '/' || currentPath === '') {
+            const defaultItem = document.querySelector('#std');
+            if (defaultItem) defaultItem.classList.add('active');
+        } else {
+            let bestMatch = null;
+            let bestMatchLength = 0;
+
+            navItems.forEach(item => {
+                const itemHref = item.getAttribute('href')?.toLowerCase();
+                if (!itemHref || itemHref === '/') return;
+
+                if (currentPath.startsWith(itemHref) && itemHref.length > bestMatchLength) {
+                    bestMatch = item;
+                    bestMatchLength = itemHref.length;
+                }
+            });
+
+            if (bestMatch) bestMatch.classList.add('active');
+        }
+        });
+    </script>
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+</html>

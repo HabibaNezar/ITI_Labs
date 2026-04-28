@@ -1,0 +1,328 @@
+﻿@using MVC_Project1.ViewModels
+@model StudentViewModel
+@{
+    ViewData["Title"] = "UpdateStudentForm";
+}
+
+<style>
+    .form-page {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 16px;
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    .student-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 6px 32px rgba(45,36,56,.12);
+        overflow: hidden;
+        border: 1px solid rgba(45,36,56,.06);
+        width: 100%;
+    }
+
+    .student-card-header {
+        background: #2D2438;
+        padding: 14px 24px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+
+        .student-card-header .header-icon {
+            width: 40px;
+            height: 40px;
+            background: #F5A623;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #2D2438;
+            font-size: 1rem;
+            flex-shrink: 0;
+        }
+
+        .student-card-header h4 {
+            font-family: 'Bebas Neue', sans-serif;
+            font-size: 1.4rem;
+            letter-spacing: .08em;
+            color: #fff;
+            margin: 0;
+            line-height: 1;
+        }
+
+        .student-card-header span {
+            font-size: .75rem;
+            color: rgba(232,217,181,.6);
+            letter-spacing: .04em;
+        }
+
+    .student-card-body {
+        padding: 18px 24px;
+    }
+
+    .form-label {
+        font-size: .8rem;
+        font-weight: 600;
+        letter-spacing: .06em;
+        text-transform: uppercase;
+        color: #574E6E;
+        margin-bottom: 4px;
+    }
+
+    .form-control,
+    .form-select {
+        border: 1.5px solid #E8D9B5;
+        border-radius: 10px;
+        padding: 8px 12px;
+        font-size: .85rem;
+        color: #1A1525;
+        background: #F9F6F0;
+        transition: border-color .2s, box-shadow .2s, background .2s;
+        box-shadow: none;
+    }
+
+        .form-control::placeholder {
+            color: #b0a5c0;
+        }
+
+        .form-control:focus,
+        .form-select:focus {
+            border-color: #F5A623;
+            background: #fff;
+            box-shadow: 0 0 0 3px rgba(245,166,35,.15);
+            outline: none;
+        }
+
+        .form-control[type="file"] {
+            padding: 8px 12px;
+            cursor: pointer;
+        }
+
+            .form-control[type="file"]::-webkit-file-upload-button {
+                background: #2D2438;
+                color: #F5A623;
+                border: none;
+                border-radius: 7px;
+                padding: 6px 14px;
+                font-size: .78rem;
+                font-weight: 600;
+                letter-spacing: .04em;
+                cursor: pointer;
+                margin-right: 12px;
+                transition: background .2s;
+            }
+
+                .form-control[type="file"]::-webkit-file-upload-button:hover {
+                    background: #3D3250;
+                }
+
+    .field-group {
+        position: relative;
+        margin-bottom: 12px;
+    }
+
+    /* Current image preview */
+    .current-image-wrap {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+        background: #F9F6F0;
+        border: 1.5px solid #E8D9B5;
+        border-radius: 10px;
+        padding: 10px 14px;
+        margin-bottom: 10px;
+    }
+
+        .current-image-wrap img {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #E8D9B5;
+            flex-shrink: 0;
+        }
+
+        .current-image-wrap .img-meta strong {
+            display: block;
+            font-size: .8rem;
+            font-weight: 600;
+            color: #2D2438;
+        }
+
+        .current-image-wrap .img-meta small {
+            font-size: .73rem;
+            color: #7A7090;
+        }
+
+    .file-hint {
+        font-size: .74rem;
+        color: #7A7090;
+        margin-top: 5px;
+        display: block;
+    }
+
+    .form-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-top: 1px solid #F0EBE0;
+        padding-top: 14px;
+        margin-top: 4px;
+        gap: 12px;
+    }
+
+    .btn-save {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: #F5A623;
+        color: #2D2438;
+        font-weight: 700;
+        font-size: .85rem;
+        letter-spacing: .04em;
+        padding: 11px 26px;
+        border: none;
+        border-radius: 10px;
+        cursor: pointer;
+        transition: background .2s, transform .15s, box-shadow .2s;
+        box-shadow: 0 4px 14px rgba(245,166,35,.35);
+    }
+
+        .btn-save:hover {
+            background: #D4891A;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 20px rgba(245,166,35,.45);
+        }
+
+    .btn-back {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: transparent;
+        color: #574E6E;
+        font-size: .83rem;
+        font-weight: 600;
+        padding: 10px 20px;
+        border: 1.5px solid #E8D9B5;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: border-color .2s, color .2s, background .2s;
+    }
+
+        .btn-back:hover {
+            border-color: #2D2438;
+            color: #2D2438;
+            background: #F0EBE0;
+        }
+
+    .text-danger {
+        font-size: .78rem;
+        margin-top: 4px;
+        display: block;
+    }
+</style>
+
+<div class="form-page">
+    <div class="student-card">
+
+        <!-- Header -->
+        <div class="student-card-header">
+            <div class="header-icon">
+                <i class="fa-solid fa-user-pen"></i>
+            </div>
+            <div>
+                <h4>Update Student</h4>
+                <span>Edit the details below and save your changes</span>
+            </div>
+        </div>
+
+        <!-- Body -->
+        <div class="student-card-body">
+            <div class="text-danger mb-3"></div>
+
+            <form method="post" action="/student/SaveUpdateStudent/" enctype="multipart/form-data">
+
+                <input type="hidden" name="Ssn" value="@Model.Ssn" />
+
+                @* <!-- Full Name -->
+                <div class="field-group">
+                    <label class="form-label">Full Name</label>
+                    <input name="Name" value="@Model?.Name" class="form-control" placeholder="Enter full name" required />
+                    <span class="text-danger"></span>
+                </div>
+
+                <!-- Email -->
+                <div class="field-group">
+                    <label class="form-label">Email Address</label>
+                    <input name="Email" value="@Model?.Email" type="email" class="form-control" placeholder="example@mail.com" required />
+                    <span class="text-danger"></span>
+                </div>
+
+                <!-- Phone + Address -->
+                <div class="row mb-0">
+                    <div class="col-md-6 field-group">
+                        <label class="form-label">Phone Number</label>
+                        <input name="Phone" value="@Model?.Phone" class="form-control" placeholder="01xxxxxxxxx" />
+                    </div>
+                    <div class="col-md-6 field-group">
+                        <label class="form-label">Address</label>
+                        <input name="Address" value="@Model?.Address" class="form-control" placeholder="City, Street" />
+                    </div>
+                </div>
+
+                <!-- Department -->
+                <div class="field-group">
+                    <label class="form-label">Department</label>
+                    <select name="DeptId" id="DeptId" class="form-select">
+                        @foreach (var dept in Model.Departments)
+                        {
+                            if (Model.DeptId == dept.DeptId)
+                            {
+                                <option value="@dept.DeptId" selected>@dept.DeptName</option>
+                            }
+                            else
+                            {
+                                <option value="@dept.DeptId">@dept.DeptName</option>
+                            }
+                        }
+                    </select>
+                    <span class="text-danger"></span>
+                </div>
+
+                <!-- Profile Picture -->
+                <div class="field-group">
+                    <label class="form-label">Profile Picture</label>
+
+                    @if (!string.IsNullOrEmpty(Model?.Image))
+                    {
+                        <div class="current-image-wrap">
+                            <img src="/images/@Model.Image" alt="Current Image" />
+                            <div class="img-meta">
+                                <strong>Current Photo</strong>
+                                <small>Upload a new image below to replace it</small>
+                            </div>
+                        </div>
+                    }
+
+                    <input type="file" name="file" class="form-control" accept="image/*" />
+                    <small class="file-hint"><i class="fa-solid fa-circle-info"></i> Leave blank to keep the current photo.</small>
+                    <input type="hidden" name="Image" value="@Model?.Image" />
+                </div>
+
+                <!-- Footer -->
+                <div class="form-footer">
+                    <a href="/student/getAllStudents" class="btn-back">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        Back to All Students
+                    </a>
+                    <input type="submit" value="Save Changes" class="btn-save" />
+                </div> *@
+                <partial name="_StudentFormDataPV"></partial>
+            </form>
+        </div>
+
+    </div>
+</div>

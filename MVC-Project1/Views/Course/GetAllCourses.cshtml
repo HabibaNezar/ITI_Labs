@@ -1,0 +1,266 @@
+﻿@model List<Course>
+@{
+    ViewData["Title"] = "GetAllCourses";
+}
+
+<style>
+    .students-page {
+        padding: 28px 32px;
+        width: 100%;
+    }
+
+    .page-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 24px;
+    }
+
+    .page-header-title h2 {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 2rem;
+        letter-spacing: .06em;
+        color: #2D2438;
+        line-height: 1;
+        margin: 0;
+    }
+
+    .page-header-title p {
+        font-size: .8rem;
+        color: #7A7090;
+        margin-top: 4px;
+    }
+
+    .btn-add {
+        display: inline-flex;
+        align-items: center;
+        gap: 7px;
+        background: #F5A623;
+        color: #2D2438;
+        font-weight: 700;
+        font-size: .82rem;
+        letter-spacing: .04em;
+        padding: 10px 20px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: background .2s, transform .15s, box-shadow .2s;
+        box-shadow: 0 4px 14px rgba(245,166,35,.3);
+    }
+
+        .btn-add:hover {
+            background: #D4891A;
+            color: #2D2438;
+            transform: translateY(-1px);
+            box-shadow: 0 6px 18px rgba(245,166,35,.4);
+        }
+
+    .table-card {
+        background: #fff;
+        border-radius: 16px;
+        box-shadow: 0 4px 24px rgba(45,36,56,.09);
+        overflow: hidden;
+        border: 1px solid rgba(45,36,56,.06);
+        width: 100%;
+    }
+
+    .students-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 0;
+    }
+
+        .students-table thead tr {
+            background: #2D2438;
+        }
+
+        .students-table thead th {
+            padding: 15px 20px;
+            font-size: .72rem;
+            font-weight: 700;
+            letter-spacing: .12em;
+            text-transform: uppercase;
+            color: #E8D9B5;
+            text-align: center;
+            border: none;
+            white-space: nowrap;
+        }
+
+            .students-table thead th:first-child {
+                text-align: left;
+            }
+
+        .students-table tbody tr {
+            border-bottom: 1px solid #F0EBE0;
+            transition: background .18s;
+        }
+
+            .students-table tbody tr:last-child {
+                border-bottom: none;
+            }
+
+            .students-table tbody tr:hover {
+                background: #FAF7F2;
+            }
+
+        .students-table tbody td {
+            padding: 14px 20px;
+            font-size: .87rem;
+            color: #1A1525;
+            text-align: center;
+            vertical-align: middle;
+            border: none;
+        }
+
+            .students-table tbody td:first-child {
+                text-align: left;
+            }
+
+    .course-name {
+        font-weight: 600;
+        color: #2D2438;
+    }
+
+    .course-desc {
+        color: #574E6E;
+        font-size: .83rem;
+        max-width: 360px;
+    }
+
+    .action-btns {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+    }
+
+    .btn-view, .btn-edit, .btn-delete {
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+        font-size: .75rem;
+        font-weight: 600;
+        padding: 6px 12px;
+        border-radius: 7px;
+        text-decoration: none;
+        border: 1.5px solid transparent;
+        transition: all .18s;
+        cursor: pointer;
+    }
+
+    .btn-view {
+        background: rgba(87,78,110,.08);
+        color: #574E6E;
+        border-color: rgba(87,78,110,.2);
+    }
+
+        .btn-view:hover {
+            background: #574E6E;
+            color: #fff;
+        }
+
+    .btn-edit {
+        background: rgba(245,166,35,.1);
+        color: #D4891A;
+        border-color: rgba(245,166,35,.35);
+    }
+
+        .btn-edit:hover {
+            background: #F5A623;
+            color: #2D2438;
+        }
+
+    .btn-delete {
+        background: rgba(220,53,69,.07);
+        color: #dc3545;
+        border-color: rgba(220,53,69,.25);
+        font-family: inherit;
+    }
+
+        .btn-delete:hover {
+            background: #dc3545;
+            color: #fff;
+        }
+
+    .empty-state {
+        text-align: center;
+        padding: 60px 20px;
+        color: #7A7090;
+    }
+
+        .empty-state i {
+            font-size: 2.5rem;
+            color: #E8D9B5;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        .empty-state p {
+            font-size: .9rem;
+        }
+</style>
+
+<div class="students-page">
+
+    <!-- Header -->
+    <div class="page-header">
+        <div class="page-header-title">
+            <h2>Courses Directory</h2>
+        </div>
+        <a href="/Course/AddNewCourseForm" class="btn-add">
+            <i class="fa-solid fa-plus"></i>
+            Add New Course
+        </a>
+    </div>
+
+    <!-- Table -->
+    <div class="table-card">
+        <table class="students-table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Min Degree</th>
+                    <th>Max Degree</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @if (Model.Count == 0)
+                {
+                    <tr>
+                        <td colspan="3">
+                            <div class="empty-state">
+                                <i class="fa-solid fa-book-open"></i>
+                                <p>No courses found. Add one to get started.</p>
+                            </div>
+                        </td>
+                    </tr>
+                }
+                @foreach (var crs in Model)
+                {
+                    <tr>
+                        <td class="course-name">@crs.Name</td>
+                        <td class="course-desc">@crs.Description</td>
+                        <td class="course-desc">@crs.MaxDegree</td>
+                        <td class="course-desc">@crs.MaxDegree</td>
+                        <td>
+                            <div class="action-btns">
+                                <a href="/Course/GetCourseDetails/@crs.CrsId" class="btn-view">
+                                    <i class="fa-solid fa-eye"></i> View
+                                </a>
+                                <a href="/Course/EditCourseForm/@crs.CrsId" class="btn-edit">
+                                    <i class="fa-solid fa-pen"></i> Edit
+                                </a>
+                                <a href="/Course/Delete/@crs.CrsId" class="btn-delete"
+                                   onclick="return confirm('Are you sure you want to delete this course?');">
+                                    <i class="fa-solid fa-trash"></i> Delete
+                                </a>
+                            </div>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+
+</div>

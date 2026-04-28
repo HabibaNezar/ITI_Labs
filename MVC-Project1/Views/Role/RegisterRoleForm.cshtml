@@ -1,0 +1,597 @@
+﻿@model MVC_Project1.ViewModels.RegisterRoleViewModel
+@{
+    ViewData["Title"] = "Create Account";
+    Layout = "_MyLayout";
+}
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+<style>
+    *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+
+    :root {
+        --ink: #12101A;
+        --ink-soft: #3A3550;
+        --muted: #8B82A7;
+        --gold: #C9972B;
+        --gold-light: #F5C96A;
+        --cream: #F7F3EC;
+        --white: #FFFFFF;
+        --border: #E4DDD0;
+        --danger: #B94040;
+        --danger-bg: #FDF2F2;
+    }
+
+    /* ── PAGE SHELL ── */
+    .rr-page {
+        min-height: calc(100vh - 64px);
+        display: grid;
+        grid-template-columns: 1fr ;
+        font-family: 'Outfit', sans-serif;
+    }
+
+    /* ── LEFT PANEL ── */
+    .rr-panel {
+        background: var(--ink);
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 56px 52px;
+        overflow: hidden;
+    }
+
+        .rr-panel::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 20% 80%, rgba(201,151,43,.22) 0%, transparent 70%), radial-gradient(ellipse 40% 60% at 80% 10%, rgba(201,151,43,.10) 0%, transparent 60%);
+        }
+
+    .rr-panel-lines {
+        position: absolute;
+        inset: 0;
+        overflow: hidden;
+        opacity: .06;
+    }
+
+        .rr-panel-lines span {
+            position: absolute;
+            display: block;
+            width: 1px;
+            height: 100%;
+            background: var(--gold-light);
+            animation: lineDrift 8s ease-in-out infinite alternate;
+        }
+
+            .rr-panel-lines span:nth-child(1) {
+                left: 15%;
+                animation-delay: 0s;
+            }
+
+            .rr-panel-lines span:nth-child(2) {
+                left: 30%;
+                animation-delay: 1.2s;
+            }
+
+            .rr-panel-lines span:nth-child(3) {
+                left: 55%;
+                animation-delay: 2.4s;
+            }
+
+            .rr-panel-lines span:nth-child(4) {
+                left: 75%;
+                animation-delay: 0.7s;
+            }
+
+            .rr-panel-lines span:nth-child(5) {
+                left: 90%;
+                animation-delay: 3.1s;
+            }
+
+    @@keyframes lineDrift {
+        from
+
+    {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+
+    }
+
+    .rr-panel-badge {
+        position: relative;
+        z-index: 1;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        background: rgba(201,151,43,.15);
+        border: 1px solid rgba(201,151,43,.35);
+        color: var(--gold-light);
+        font-size: .72rem;
+        font-weight: 600;
+        letter-spacing: .12em;
+        text-transform: uppercase;
+        padding: 6px 14px;
+        border-radius: 100px;
+        margin-bottom: 28px;
+        width: fit-content;
+    }
+
+    .rr-panel-headline {
+        position: relative;
+        z-index: 1;
+        font-family: 'Playfair Display', serif;
+        font-size: clamp(2.4rem, 4vw, 3.4rem);
+        font-weight: 900;
+        color: var(--white);
+        line-height: 1.1;
+        margin-bottom: 20px;
+    }
+
+        .rr-panel-headline em {
+            font-style: normal;
+            color: var(--gold-light);
+        }
+
+    .rr-panel-sub {
+        position: relative;
+        z-index: 1;
+        color: var(--muted);
+        font-size: .88rem;
+        line-height: 1.7;
+        max-width: 320px;
+        margin-bottom: 40px;
+    }
+
+    .rr-features {
+        position: relative;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .rr-feature-item {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        color: rgba(255,255,255,.65);
+        font-size: .84rem;
+    }
+
+        .rr-feature-item i {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(201,151,43,.18);
+            border: 1px solid rgba(201,151,43,.3);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--gold-light);
+            font-size: .7rem;
+            flex-shrink: 0;
+        }
+
+    /* ── RIGHT PANEL (FORM) ── */
+    .rr-form-side {
+        background: var(--cream);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 48px 40px;
+    }
+
+    .rr-form-wrap {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    .rr-form-top {
+        margin-bottom: 34px;
+    }
+
+        .rr-form-top h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 6px;
+        }
+
+        .rr-form-top p {
+            font-size: .84rem;
+            color: var(--muted);
+        }
+
+    /* ── VALIDATION SUMMARY ── */
+    .val-summary {
+        background: var(--danger-bg);
+        border-left: 3px solid var(--danger);
+        border-radius: 8px;
+        padding: 10px 16px;
+        font-size: .8rem;
+        color: var(--danger);
+        margin-bottom: 24px;
+        display: none;
+    }
+
+        .val-summary:not(:empty) {
+            display: block;
+        }
+
+    /* ── FIELD ── */
+    .rr-row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .rr-field {
+        margin-bottom: 16px;
+    }
+
+        .rr-field label {
+            display: block;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            margin-bottom: 7px;
+        }
+
+    .field-wrap {
+        position: relative;
+    }
+
+        .field-wrap i.fi {
+            position: absolute;
+            left: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: .78rem;
+            pointer-events: none;
+            transition: color .2s;
+        }
+
+        .field-wrap input,
+        .field-wrap select {
+            width: 100%;
+            padding: 11px 14px 11px 38px;
+            background: var(--white);
+            border: 1.5px solid var(--border);
+            border-radius: 10px;
+            font-family: 'Outfit', sans-serif;
+            font-size: .875rem;
+            color: var(--ink);
+            outline: none;
+            transition: border-color .2s, box-shadow .2s;
+            appearance: none;
+            -webkit-appearance: none;
+        }
+
+            .field-wrap input:focus,
+            .field-wrap select:focus {
+                border-color: var(--gold);
+                box-shadow: 0 0 0 3px rgba(201,151,43,.13);
+                background: var(--white);
+            }
+
+                .field-wrap input:focus ~ i.fi,
+                .field-wrap select:focus ~ i.fi {
+                    color: var(--gold);
+                }
+
+            .field-wrap input::placeholder {
+                color: #BDB5CC;
+            }
+
+        /* select arrow */
+        .field-wrap .select-arrow {
+            position: absolute;
+            right: 13px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--muted);
+            font-size: .72rem;
+            pointer-events: none;
+        }
+
+    .text-danger {
+        font-size: .74rem;
+        color: var(--danger);
+        margin-top: 5px;
+        display: block;
+    }
+
+    /* ── DIVIDER ── */
+    .rr-divider {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 4px 0 16px;
+        color: var(--border);
+        font-size: .72rem;
+        color: var(--muted);
+        letter-spacing: .06em;
+        text-transform: uppercase;
+    }
+
+        .rr-divider::before,
+        .rr-divider::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border);
+        }
+
+    /* ── ROLE CARDS ── */
+    .role-select-group {
+        margin-bottom: 20px;
+    }
+
+        .role-select-group label.group-label {
+            display: block;
+            font-size: .72rem;
+            font-weight: 600;
+            letter-spacing: .07em;
+            text-transform: uppercase;
+            color: var(--ink-soft);
+            margin-bottom: 10px;
+        }
+
+    /* Hidden native select for form submission */
+    #Role {
+        display: none;
+    }
+
+    .role-pills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+    }
+
+    .role-pill {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 9px 16px;
+        border-radius: 100px;
+        border: 1.5px solid var(--border);
+        background: var(--white);
+        cursor: pointer;
+        font-family: 'Outfit', sans-serif;
+        font-size: .82rem;
+        font-weight: 500;
+        color: var(--ink-soft);
+        transition: all .2s;
+        user-select: none;
+    }
+
+        .role-pill i {
+            font-size: .75rem;
+            color: var(--muted);
+            transition: color .2s;
+        }
+
+        .role-pill:hover {
+            border-color: var(--gold);
+            color: var(--ink);
+        }
+
+        .role-pill.active {
+            background: var(--ink);
+            border-color: var(--ink);
+            color: var(--white);
+        }
+
+            .role-pill.active i {
+                color: var(--gold-light);
+            }
+
+    /* ── SUBMIT ── */
+    .btn-submit {
+        width: 100%;
+        padding: 14px;
+        border: none;
+        border-radius: 10px;
+        background: var(--ink);
+        color: var(--white);
+        font-family: 'Outfit', sans-serif;
+        font-size: .9rem;
+        font-weight: 700;
+        cursor: pointer;
+        transition: background .2s, transform .1s;
+        letter-spacing: .03em;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        margin-top: 8px;
+    }
+
+        .btn-submit:hover {
+            background: var(--gold);
+            color: var(--ink);
+        }
+
+        .btn-submit:active {
+            transform: scale(.98);
+        }
+
+        .btn-submit i {
+            font-size: .85rem;
+        }
+
+    /* ── RESPONSIVE ── */
+    @@media (max-width: 860px) {
+        .rr-page {
+            grid-template-columns: 1fr;
+        }
+
+        .rr-panel {
+            padding: 40px 28px;
+            min-height: 260px;
+        }
+
+        .rr-panel-headline {
+            font-size: 2rem;
+        }
+
+        .rr-form-side {
+            padding: 36px 24px;
+        }
+
+        .rr-row {
+            grid-template-columns: 1fr;
+        }
+    }
+</style>
+
+<div class="rr-page">
+
+    
+
+    <!-- ── RIGHT FORM PANEL ── -->
+    <main class="rr-form-side">
+        <div class="rr-form-wrap">
+
+            <div class="rr-form-top">
+                <h2>Create Account</h2>
+                <p>Fill in your details and pick a role to get started.</p>
+            </div>
+
+            <form asp-action="GetAllStudents" asp-controller="student" method="post">
+
+                @* <div asp-validation-summary="All" class="val-summary"></div> *@
+
+                <!-- Name + Email -->
+                <div class="rr-row">
+                    <div class="rr-field">
+                        <label asp-for="UserName"></label>
+                        <div class="field-wrap">
+                            <i class="fa-solid fa-user fi"></i>
+                            <input asp-for="UserName" placeholder="ahmed_kamal" />
+                        </div>
+                        <span asp-validation-for="UserName" class="text-danger"></span>
+                    </div>
+
+                    <div class="rr-field">
+                        <label asp-for="Email"></label>
+                        <div class="field-wrap">
+                            <i class="fa-solid fa-envelope fi"></i>
+                            <input asp-for="Email" placeholder="you@example.com" />
+                        </div>
+                        <span asp-validation-for="Email" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Password + Confirm -->
+                <div class="rr-row">
+                    <div class="rr-field">
+                        <label asp-for="Password"></label>
+                        <div class="field-wrap">
+                            <i class="fa-solid fa-lock fi"></i>
+                            <input asp-for="Password" placeholder="••••••••" />
+                        </div>
+                        <span asp-validation-for="Password" class="text-danger"></span>
+                    </div>
+
+                    <div class="rr-field">
+                        <label asp-for="ConfirmPassword"></label>
+                        <div class="field-wrap">
+                            <i class="fa-solid fa-lock fi"></i>
+                            <input asp-for="ConfirmPassword" placeholder="••••••••" />
+                        </div>
+                        <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <!-- Address -->
+                <div class="rr-field">
+                    <label asp-for="Address"></label>
+                    <div class="field-wrap">
+                        <i class="fa-solid fa-location-dot fi"></i>
+                        <input asp-for="Address" placeholder="123 Main St, Cairo" />
+                    </div>
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="rr-divider">Choose a role</div>
+
+                <!-- Role — interactive pills + hidden select -->
+                <div class="role-select-group">
+                    <label class="group-label">Assign Role</label>
+
+                    <!-- Hidden native select for model binding & validation -->
+                    @Html.DropDownList("Role", ViewBag.Roles as SelectList, "-- Select Role --", new { id = "Role" })
+                    @Html.ValidationMessageFor(m => m.Role, "", new { @class = "text-danger" })
+
+                    <!-- Visual pill buttons populated by JS -->
+                    <div class="role-pills" id="rolePills"></div>
+                </div>
+
+                <button type="submit" class="btn-submit">
+                    <i class="fa-solid fa-circle-check"></i> Create Account
+                </button>
+            </form>
+
+        </div>
+    </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.5/jquery.validate.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validation-unobtrusive/4.0.0/jquery.validate.unobtrusive.min.js"></script>
+
+<script>
+    // Role icon map — add more as needed
+    const roleIcons = {
+        'Admin':    'fa-solid fa-user-shield',
+        'Teacher':  'fa-solid fa-chalkboard-teacher',
+        'Student':  'fa-solid fa-graduation-cap',
+        'Manager':  'fa-solid fa-user-tie',
+        'Staff':    'fa-solid fa-id-badge',
+    };
+
+    const select  = document.getElementById('Role');
+    const pillBox = document.getElementById('rolePills');
+
+    function buildPills() {
+        pillBox.innerHTML = '';
+        const currentVal = select.value;
+
+        Array.from(select.options).forEach(opt => {
+            if (!opt.value) return; // skip placeholder
+
+            const pill = document.createElement('button');
+            pill.type = 'button';
+            pill.className = 'role-pill' + (opt.value === currentVal ? ' active' : '');
+            pill.dataset.value = opt.value;
+
+            const icon = roleIcons[opt.text] || 'fa-solid fa-circle-user';
+            pill.innerHTML = `<i class="${icon}"></i>${opt.text}`;
+
+            pill.addEventListener('click', () => {
+                select.value = opt.value;
+                document.querySelectorAll('.role-pill').forEach(p => p.classList.remove('active'));
+                pill.classList.add('active');
+            });
+
+            pillBox.appendChild(pill);
+        });
+    }
+
+    buildPills();
+</script>

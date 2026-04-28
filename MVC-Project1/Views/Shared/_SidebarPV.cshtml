@@ -1,0 +1,57 @@
+﻿<aside class="sidebar" id="sidebar">
+
+    <div class="sidebar-brand">
+        <div class="brand-avatar">
+            <i class="fa-solid fa-graduation-cap"></i>
+        </div>
+        <div class="brand-info">
+            <h2>MYAPP</h2>
+            <span>MVC Project 1</span>
+        </div>
+    </div>
+
+    <nav class="sidebar-nav">
+        <div class="nav-label">Main Menu</div>
+
+        <a asp-controller="Student" asp-action="GetAllStudents" id="std" class="nav-item ">
+            <div class="nav-icon"><i class="fa-solid fa-user-graduate"></i></div>
+            Students
+        </a>
+
+        <a asp-controller="Course" asp-action="GetAllCourses" class="nav-item">
+            <div class="nav-icon"><i class="fa-solid fa-book-open"></i></div>
+            Courses
+        </a>
+
+        <a asp-controller="Department" asp-action="GetAllDepartments" class="nav-item">
+            <div class="nav-icon"><i class="fa-solid fa-building-user"></i></div>
+            Departments
+        </a>
+
+        <a asp-controller="Instructor" asp-action="GetAllInstructors" class="nav-item">
+            <div class="nav-icon"><i class="fa-solid fa-chalkboard-user"></i></div>
+            Instructors
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+        <div class="sidebar-user">
+            <div class="user-thumb"><i class="fa-solid fa-user-shield"></i></div>
+            <div class="user-details">
+                <strong>@User.Identity.Name</strong>
+                @{
+                    var role = User.FindFirst(System.Security.Claims.ClaimTypes.Role)?.Value;
+                }
+
+                @if (role != null)
+                {
+                    <small>@role</small>
+                }
+                
+            </div>
+            <i class="fa-solid fa-gear" style="color: rgba(232,217,181,.5); margin-left: auto;"></i>
+        </div>
+    </div>
+
+</aside>

@@ -1,0 +1,78 @@
+﻿@using MVC_Project1.ViewModels
+@model StudentViewModel
+
+
+<div class="field-group">
+    <label class="form-label">Full Name</label>
+    <input asp-for="Name" class="form-control" placeholder="Enter full name" />
+    <span asp-validation-for="Name" class="text-danger"></span>
+</div>
+
+<div class="field-group">
+    <label class="form-label">Email Address</label>
+    <input asp-for="Email" class="form-control" placeholder="example@mail.com" />
+    <span asp-validation-for="Email" class="text-danger"></span>
+</div>
+
+<div class="row mb-0">
+    <div class="col-md-6 field-group">
+        <label class="form-label">Phone Number</label>
+        <input asp-for="Phone" class="form-control" placeholder="01xxxxxxxxx" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+    <div class="col-md-6 field-group">
+        <label class="form-label">Address</label>
+        @* <input asp-for="Address" class="form-control" placeholder="City, Street" /> *@
+        <select asp-for="Address" class="form-select" asp-items="@(new List<SelectListItem>{
+                                                                                        new SelectListItem {Text="Cairo", Value ="Cairo"},
+                                                                                         new SelectListItem{Text ="Alex ", Value ="Alex"},
+                                                                                       new SelectListItem{Text="Ismailia", Value="Ismailia"}
+                                                                              } )">
+            <option>-- Select Address --</option>
+        </select>
+        <span asp-validation-for="Address" class="text-danger"></span>
+    </div>
+</div>
+
+<div class="field-group">
+    <label class="form-label">Department</label>
+    <select asp-for="DeptId" class="form-select" asp-items="@(new SelectList(Model.Departments, "DeptId", "DeptName"))">
+        <option value="">-- Select Department --</option>
+    </select>
+    <span asp-validation-for="DeptId" class="text-danger"></span>
+</div>
+
+@* <div class="field-group">
+    <label class="form-label">Profile Picture</label>
+    <input type="file" name="Image" class="form-control" accept="image/*" />
+    <small class="file-hint"><i class="fa-solid fa-circle-info"></i> Upload a clear photo (jpg, png).</small>
+    <span asp-validation-for="Image" class="text-danger"></span>
+</div> *@
+
+<!-- Profile Picture -->
+<div class="field-group">
+    <label class="form-label">Profile Picture</label>
+
+    @if (!string.IsNullOrEmpty(Model?.Image))
+    {
+        <div class="current-image-wrap">
+            <img src="/images/@Model.Image" alt="Current Image" />
+            <div class="img-meta">
+                <strong>Current Photo</strong>
+                <small>Upload a new image below to replace it</small>
+            </div>
+        </div>
+    }
+
+    <input type="file" name="Image" class="form-control" accept="image/*" />
+    <small class="file-hint"><i class="fa-solid fa-circle-info"></i> Leave blank to keep the current photo.</small>
+    @* <input type="hidden" name="Image" value="@Model?.Image" /> *@
+</div>
+
+<div class="form-footer">
+    <a asp-controller="Student" asp-action="GetAllStudents" class="btn-back">
+        <i class="fa-solid fa-arrow-left"></i>
+        Back to All Students
+    </a>
+    <button type="submit" class="btn-save">Save Student Data</button>
+</div>

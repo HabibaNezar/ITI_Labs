@@ -1,0 +1,292 @@
+﻿<style>
+    .header {
+        grid-area: header;
+        background: var(--white);
+        display: flex;
+        align-items: center;
+        padding: 0 28px;
+        height: 62px;
+        border-bottom: 1px solid rgba(45,36,56,.08);
+        box-shadow: 0 1px 0 rgba(45,36,56,.05), 0 4px 16px rgba(45,36,56,.04);
+        position: sticky;
+        top: 0;
+        z-index: 90;
+        gap: 16px;
+    }
+
+    /* ── MOBILE TOGGLE ── */
+    .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        font-size: 1.15rem;
+        color: var(--purple);
+        cursor: pointer;
+        padding: 6px;
+        border-radius: 8px;
+        transition: background .2s;
+        flex-shrink: 0;
+    }
+
+        .mobile-toggle:hover {
+            background: var(--bg);
+        }
+
+    /* ── BRAND / TITLE ── */
+    .header-brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+    }
+
+    .header-brand-dot {
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: var(--orange);
+        box-shadow: 0 0 0 3px rgba(245,166,35,.2);
+        flex-shrink: 0;
+    }
+
+    .header-brand-title {
+        font-family: 'Bebas Neue', sans-serif;
+        font-size: 1.15rem;
+        color: var(--purple);
+        letter-spacing: .08em;
+        line-height: 1;
+        white-space: nowrap;
+    }
+
+    .header-brand-sep {
+        width: 1px;
+        height: 18px;
+        background: var(--beige);
+        margin: 0 2px;
+    }
+
+    .header-brand-sub {
+        font-size: .72rem;
+        color: var(--text-muted);
+        font-weight: 500;
+        letter-spacing: .04em;
+        white-space: nowrap;
+    }
+
+    /* ── SPACER ── */
+    .header-spacer {
+        flex: 1;
+    }
+
+    /* ── NAV ACTIONS (Admin links) ── */
+    .header-nav {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+    }
+
+    .header-nav-link {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 13px;
+        border-radius: 9px;
+        font-size: .8rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-decoration: none;
+        letter-spacing: .02em;
+        transition: background .18s, color .18s;
+        white-space: nowrap;
+    }
+
+        .header-nav-link i {
+            font-size: .75rem;
+            opacity: .8;
+        }
+
+        .header-nav-link:hover {
+            background: var(--bg);
+            color: var(--purple);
+        }
+
+            .header-nav-link:hover i {
+                opacity: 1;
+            }
+
+        /* filled pill style for Add Role */
+        .header-nav-link.accent {
+            background: rgba(45,36,56,.06);
+            color: var(--purple);
+        }
+
+            .header-nav-link.accent:hover {
+                background: var(--purple);
+                color: var(--white);
+            }
+
+    /* ── DIVIDER ── */
+    .header-divider {
+        width: 1px;
+        height: 24px;
+        background: var(--beige);
+        flex-shrink: 0;
+    }
+
+    /* ── PROFILE CHIP ── */
+    .header-profile {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 5px 10px 5px 5px;
+        border-radius: 12px;
+        cursor: default;
+        transition: background .2s;
+        flex-shrink: 0;
+    }
+
+        .header-profile:hover {
+            background: var(--bg);
+        }
+
+    .profile-avatar {
+        width: 34px;
+        height: 34px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--orange) 0%, var(--orange-dark) 100%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: var(--purple);
+        font-weight: 800;
+        font-size: .82rem;
+        letter-spacing: -.01em;
+        flex-shrink: 0;
+        box-shadow: 0 2px 8px rgba(245,166,35,.35);
+    }
+
+    .profile-meta {
+        line-height: 1;
+    }
+
+        .profile-meta strong {
+            display: block;
+            font-size: .8rem;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-bottom: 3px;
+        }
+
+    .profile-role-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 4px;
+        font-size: .66rem;
+        font-weight: 600;
+        letter-spacing: .05em;
+        text-transform: uppercase;
+        color: var(--orange-dark);
+        background: rgba(245,166,35,.12);
+        padding: 2px 7px;
+        border-radius: 100px;
+    }
+
+        .profile-role-badge i {
+            font-size: .6rem;
+        }
+
+    /* ── LOGOUT ── */
+    .btn-logout {
+        display: flex;
+        align-items: center;
+        gap: 7px;
+        padding: 7px 13px;
+        border-radius: 9px;
+        font-size: .8rem;
+        font-weight: 600;
+        color: var(--text-muted);
+        text-decoration: none;
+        transition: background .18s, color .18s;
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+        .btn-logout i {
+            font-size: .8rem;
+        }
+
+        .btn-logout:hover {
+            background: #fdf2f2;
+            color: #b94040;
+        }
+
+    /* ── RESPONSIVE ── */
+    @@media (max-width: 768px) {
+        .mobile-toggle {
+            display: flex;
+        }
+
+        .header-brand-sub {
+            display: none;
+        }
+
+        .header-brand-sep {
+            display: none;
+        }
+
+        .header-nav-link span {
+            display: none;
+        }
+
+        .header-nav-link {
+            padding: 7px 10px;
+        }
+
+        .profile-meta {
+            display: none;
+        }
+    }
+</style>
+
+<header class="header">
+
+    <button class="mobile-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+        <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Brand -->
+    <div class="header-brand">
+        <div class="header-brand-dot"></div>
+        <span class="header-brand-title">EduTrack</span>
+        <div class="header-brand-sep"></div>
+        <span class="header-brand-sub">ITI MVC Project</span>
+    </div>
+
+    <div class="header-spacer"></div>
+
+    <!-- Admin nav links -->
+    @if (User.IsInRole("Admin"))
+    {
+        <nav class="header-nav">
+            <a asp-controller="Role" asp-action="RegisterRoleForm" class="header-nav-link">
+                <i class="fa-solid fa-user-plus"></i>
+                <span>Assign Role</span>
+            </a>
+            <a asp-controller="Role" asp-action="Create" class="header-nav-link accent">
+                <i class="fa-solid fa-shield-plus"></i>
+                <span>Add Role</span>
+            </a>
+        </nav>
+
+        <div class="header-divider"></div>
+    }
+
+    
+
+    <!-- Logout -->
+    <a asp-controller="account" asp-action="SignOut" class="btn-logout" title="Sign out">
+        <i class="fa-solid fa-arrow-right-from-bracket"></i>
+        <span>Log Out</span>
+    </a>
+
+</header>
